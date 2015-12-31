@@ -22,13 +22,7 @@ static NSString * const kParseGET_REST_API_Classe = @"https://api.parse.com/1/cl
 
 typedef NS_ENUM(NSInteger, HondaFailureCode)
 {
-    kHondaSuccess = 0,
-    kHondaErrorTrendWayGoExist = 12,
-    kHondaErrorTrendWayBackExist = 22,
-    kHondaErrorTrendWayGoFull = 11,
-    kHondaErrorTrendWayBackFull = 21,
-    
-    kHondaFailureNetwork = 97,
-    kHondaFailureTimeOut = 98,
-    kHondaFailureUnknowError = 99
+    kHondaFailureNetwork = 0,
+    kHondaSuccess = 1
+
 };

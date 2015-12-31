@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import "HondaAppContant.h"
 #import <Parse/Parse.h>
 
 @interface AppDelegate ()
@@ -27,7 +28,7 @@
     //
     // Uncomment and fill in with your Parse credentials:
     // [Parse setApplicationId:@"your_application_id" clientKey:@"your_client_key"];
-    [Parse setApplicationId:@"K11yFOWz1ShVrRzEXw2x0iadbhaDrPuA8zQnKtHq"
+    [Parse setApplicationId:kParseApplicationId
                   clientKey:@"mIOIith9GbIyVtovWCSkwNMhGWS3qxS0p5SlsSvH"];
     //
     // If you are using Facebook, uncomment and add your FacebookAppID to your bundle's plist as

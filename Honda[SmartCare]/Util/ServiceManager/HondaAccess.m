@@ -29,44 +29,62 @@
         
         
         AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
-        [manager.requestSerializer setValue:@"K11yFOWz1ShVrRzEXw2x0iadbhaDrPuA8zQnKtHq" forHTTPHeaderField:@"X-Parse-Application-Id"];
-        [manager.requestSerializer setValue:@"zWaJkFQiw2eCKJL1eOHQdsKhgfgui7UGnZybFDv6" forHTTPHeaderField:@"X-Parse-REST-API-Key"];
+        [manager.requestSerializer setValue:kParseApplicationId forHTTPHeaderField:xParseApplicationId];
+        [manager.requestSerializer setValue:kParseREST_APIKey forHTTPHeaderField:xParseREST_APIKey];
         [manager GET:@"https://api.parse.com/1/classes/testObject" parameters:nil progress:^(NSProgress * _Nonnull downloadProgress) {
             
         } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
-            NSLog(@"JSON: %@", responseObject);
-        } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
             
+            NSLog(@"JSON: %@", responseObject);
+            NSDictionary *jsonResponse = [NSJSONSerialization JSONObjectWithData:responseObject
+                                                                         options:NSJSONReadingMutableContainers
+                                                                           error:NULL];
+            NSArray *rarray; //= [self convertBookingArrayWithDictionary:jsonResponse];
+            if (completion) {
+                dispatch_async(dispatch_get_main_queue(), ^{
+                    completion(rarray);
+                });
+            }
+        } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+            if (failure) {
+                                dispatch_async(dispatch_get_main_queue(), ^{
+                                    failure(kHondaFailureNetwork);
+                                });
+                            }
         }];
-        
-//        // Hardcode param
-//        NSDictionary *param = @{@"Mobile" : [HelperMethods getUserID],
-//                                @"" : bookingCode};
-//        NSString *url = [NSString stringWithFormat:apiURL,kAPIBookingChuaThanhToan];
-//        
-//        AFHTTPRequestOperationManager *manage = [AFHTTPRequestOperationManager manager];
-//        manage.responseSerializer = [AFHTTPResponseSerializer serializer];
-//        //        manage.requestSerializer = [AFHTTPRequestSerializer serializer];
-//        //        [manage.requestSerializer setValue:@"application/json" forHTTPHeaderField:@"Content-Type"];
-//        [manage POST:url parameters:param success:^(AFHTTPRequestOperation *operation, id responseObject) {
-//            NSDictionary *jsonResponse = [NSJSONSerialization JSONObjectWithData:responseObject
-//                                                                         options:NSJSONReadingMutableContainers
-//                                                                           error:NULL];
-//            NSArray *rarray = [self convertTicketArrayWithDictionary:jsonResponse withType:DSVNTicketType_MyPurchaseTicket];
-//            if (completion) {
-//                dispatch_async(dispatch_get_main_queue(), ^{
-//                    completion(rarray);
-//                });
-//            }
-//        } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
-//            if (failure) {
-//                dispatch_async(dispatch_get_main_queue(), ^{
-//                    failure(kDSVNFailureNetwork);
-//                });
-//            }
-//        }];
-//    });
     });
 }
-                   
+/**
+ getAccessaryById: Lấy thông tin theo nhóm phụ tùng
+ */
+- (void)getListAccessaryByGroupId:(NSString *)groupId withCompletion:(void(^)(NSArray *resultArray))completion failure:(void(^)(HondaFailureCode failureCode))failure {
+    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_BACKGROUND, 0), ^{
+        
+        
+        AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
+        [manager.requestSerializer setValue:kParseApplicationId forHTTPHeaderField:xParseApplicationId];
+        [manager.requestSerializer setValue:kParseREST_APIKey forHTTPHeaderField:xParseREST_APIKey];
+        [manager GET:[NSString stringWithFormat:kParseGET_REST_API_Classe,groupId] parameters:nil progress:^(NSProgress * _Nonnull downloadProgress) {
+            
+        } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+            
+            NSLog(@"JSON: %@", responseObject);
+            NSDictionary *jsonResponse = [NSJSONSerialization JSONObjectWithData:responseObject
+                                                                         options:NSJSONReadingMutableContainers
+                                                                           error:NULL];
+            NSArray *rarray;
+            if (completion) {
+                dispatch_async(dispatch_get_main_queue(), ^{
+                    completion(rarray);
+                });
+            }
+        } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+            if (failure) {
+                dispatch_async(dispatch_get_main_queue(), ^{
+                    failure(kHondaFailureNetwork);
+                });
+            }
+        }];
+    });
+}
 @end
