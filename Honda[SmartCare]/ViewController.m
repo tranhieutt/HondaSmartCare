@@ -115,6 +115,25 @@
 //
 //                               }
 //                           }];
+//    demo get group accessory
+    [[HondaParse sharedInstance] getGroupAccessory:nil withCompletion:^(BOOL success) {
+        
+    } failure:^(HondaFailureCode failureCode) {
+        
+    }];
+//    demo, add accessory
+    [[HondaParse sharedInstance] addAccessory:nil withCompletion:^(BOOL success) {
+        
+    } failure:^(HondaFailureCode failureCode) {
+        
+    }];
+    
+//    demo delete accessory
+    [[HondaParse sharedInstance] deleteAccessory:nil withCompletion:^(BOOL success) {
+        
+    } failure:^(HondaFailureCode failureCode) {
+        
+    }];
 
 }
 - (IBAction)buttonClick:(id)sender {

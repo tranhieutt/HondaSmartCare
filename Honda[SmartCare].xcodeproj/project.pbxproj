@@ -121,15 +121,27 @@
 		4CF0ADE01C32DCC100B2EB33 /* UIImage+Utilities.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CF0ADD31C32DCC100B2EB33 /* UIImage+Utilities.m */; };
 		4CF0ADE11C32DCC100B2EB33 /* TCCustomFont.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CF0ADD51C32DCC100B2EB33 /* TCCustomFont.m */; };
 		4CF0ADE21C32DCC100B2EB33 /* UIView+Util.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CF0ADD81C32DCC100B2EB33 /* UIView+Util.m */; };
+		4CFA66321C376DC0009424BF /* NSMutableArray+SWUtilityButtons.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CFA66271C376DC0009424BF /* NSMutableArray+SWUtilityButtons.m */; };
+		4CFA66331C376DC0009424BF /* SWCellScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CFA66291C376DC0009424BF /* SWCellScrollView.m */; };
+		4CFA66341C376DC0009424BF /* SWLongPressGestureRecognizer.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CFA662B1C376DC0009424BF /* SWLongPressGestureRecognizer.m */; };
+		4CFA66351C376DC0009424BF /* SWTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CFA662D1C376DC0009424BF /* SWTableViewCell.m */; };
+		4CFA66361C376DC0009424BF /* SWUtilityButtonTapGestureRecognizer.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CFA662F1C376DC0009424BF /* SWUtilityButtonTapGestureRecognizer.m */; };
+		4CFA66371C376DC0009424BF /* SWUtilityButtonView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CFA66311C376DC0009424BF /* SWUtilityButtonView.m */; };
+		4CFA663C1C3774FD009424BF /* star_64_blue.png in Resources */ = {isa = PBXBuildFile; fileRef = 4CFA663A1C3774FD009424BF /* star_64_blue.png */; };
+		4CFA663D1C3774FD009424BF /* star_64_empty_blue.png in Resources */ = {isa = PBXBuildFile; fileRef = 4CFA663B1C3774FD009424BF /* star_64_empty_blue.png */; };
+		4CFA66421C377923009424BF /* ListAccessoriesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CFA66401C377923009424BF /* ListAccessoriesViewController.m */; };
+		4CFA66431C377923009424BF /* ListAccessoriesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4CFA66411C377923009424BF /* ListAccessoriesViewController.xib */; };
+		4CFA664C1C378070009424BF /* HondaDataItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CFA664B1C378070009424BF /* HondaDataItem.m */; };
 		A48E8F7B1C327850009825C1 /* YLProgressBar.m in Sources */ = {isa = PBXBuildFile; fileRef = A48E8F7A1C327850009825C1 /* YLProgressBar.m */; };
 		A48E8F8A1C327CBE009825C1 /* AccessoryStatusTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A48E8F881C327CBE009825C1 /* AccessoryStatusTableViewCell.m */; };
 		A48E8F8B1C327CBE009825C1 /* AccessoryStatusTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A48E8F891C327CBE009825C1 /* AccessoryStatusTableViewCell.xib */; };
 		A48E8F901C3280D2009825C1 /* Header.m in Sources */ = {isa = PBXBuildFile; fileRef = A48E8F8E1C3280D2009825C1 /* Header.m */; };
 		A48E8F911C3280D2009825C1 /* Header.xib in Resources */ = {isa = PBXBuildFile; fileRef = A48E8F8F1C3280D2009825C1 /* Header.xib */; };
-		A48E8F9E1C328836009825C1 /* ListAccessoriesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A48E8F9C1C328836009825C1 /* ListAccessoriesViewController.m */; };
-		A48E8F9F1C328836009825C1 /* ListAccessoriesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A48E8F9D1C328836009825C1 /* ListAccessoriesViewController.xib */; };
 		A48E8FA31C328F61009825C1 /* CollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A48E8FA11C328F61009825C1 /* CollectionViewCell.m */; };
 		A48E8FA41C328F61009825C1 /* CollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A48E8FA21C328F61009825C1 /* CollectionViewCell.xib */; };
+		A4ECE1FD1C34FEC4005E493A /* ConfirmRepairTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A4ECE1FB1C34FEC4005E493A /* ConfirmRepairTableViewCell.m */; };
+		A4ECE1FE1C34FEC4005E493A /* ConfirmRepairTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A4ECE1FC1C34FEC4005E493A /* ConfirmRepairTableViewCell.xib */; };
+		A4ECE2011C35028B005E493A /* onboard_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = A4ECE2001C35028B005E493A /* onboard_icon.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -369,6 +381,25 @@
 		4CF0ADD51C32DCC100B2EB33 /* TCCustomFont.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TCCustomFont.m; sourceTree = "<group>"; };
 		4CF0ADD71C32DCC100B2EB33 /* UIView+Util.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Util.h"; sourceTree = "<group>"; };
 		4CF0ADD81C32DCC100B2EB33 /* UIView+Util.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Util.m"; sourceTree = "<group>"; };
+		4CFA66261C376DC0009424BF /* NSMutableArray+SWUtilityButtons.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMutableArray+SWUtilityButtons.h"; sourceTree = "<group>"; };
+		4CFA66271C376DC0009424BF /* NSMutableArray+SWUtilityButtons.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMutableArray+SWUtilityButtons.m"; sourceTree = "<group>"; };
+		4CFA66281C376DC0009424BF /* SWCellScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWCellScrollView.h; sourceTree = "<group>"; };
+		4CFA66291C376DC0009424BF /* SWCellScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWCellScrollView.m; sourceTree = "<group>"; };
+		4CFA662A1C376DC0009424BF /* SWLongPressGestureRecognizer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWLongPressGestureRecognizer.h; sourceTree = "<group>"; };
+		4CFA662B1C376DC0009424BF /* SWLongPressGestureRecognizer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWLongPressGestureRecognizer.m; sourceTree = "<group>"; };
+		4CFA662C1C376DC0009424BF /* SWTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWTableViewCell.h; sourceTree = "<group>"; };
+		4CFA662D1C376DC0009424BF /* SWTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWTableViewCell.m; sourceTree = "<group>"; };
+		4CFA662E1C376DC0009424BF /* SWUtilityButtonTapGestureRecognizer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWUtilityButtonTapGestureRecognizer.h; sourceTree = "<group>"; };
+		4CFA662F1C376DC0009424BF /* SWUtilityButtonTapGestureRecognizer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWUtilityButtonTapGestureRecognizer.m; sourceTree = "<group>"; };
+		4CFA66301C376DC0009424BF /* SWUtilityButtonView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWUtilityButtonView.h; sourceTree = "<group>"; };
+		4CFA66311C376DC0009424BF /* SWUtilityButtonView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWUtilityButtonView.m; sourceTree = "<group>"; };
+		4CFA663A1C3774FD009424BF /* star_64_blue.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = star_64_blue.png; sourceTree = "<group>"; };
+		4CFA663B1C3774FD009424BF /* star_64_empty_blue.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = star_64_empty_blue.png; sourceTree = "<group>"; };
+		4CFA663F1C377923009424BF /* ListAccessoriesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ListAccessoriesViewController.h; sourceTree = "<group>"; };
+		4CFA66401C377923009424BF /* ListAccessoriesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ListAccessoriesViewController.m; sourceTree = "<group>"; };
+		4CFA66411C377923009424BF /* ListAccessoriesViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ListAccessoriesViewController.xib; sourceTree = "<group>"; };
+		4CFA664A1C378070009424BF /* HondaDataItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HondaDataItem.h; sourceTree = "<group>"; };
+		4CFA664B1C378070009424BF /* HondaDataItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HondaDataItem.m; sourceTree = "<group>"; };
 		A48E8F791C327850009825C1 /* YLProgressBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YLProgressBar.h; sourceTree = "<group>"; };
 		A48E8F7A1C327850009825C1 /* YLProgressBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YLProgressBar.m; sourceTree = "<group>"; };
 		A48E8F871C327CBE009825C1 /* AccessoryStatusTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AccessoryStatusTableViewCell.h; path = "Honda[SmartCare]/View/AccessoryStatusTableViewCell.h"; sourceTree = SOURCE_ROOT; };
@@ -377,12 +408,13 @@
 		A48E8F8D1C3280D2009825C1 /* Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Header.h; sourceTree = "<group>"; };
 		A48E8F8E1C3280D2009825C1 /* Header.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Header.m; sourceTree = "<group>"; };
 		A48E8F8F1C3280D2009825C1 /* Header.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Header.xib; sourceTree = "<group>"; };
-		A48E8F9B1C328836009825C1 /* ListAccessoriesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ListAccessoriesViewController.h; path = "Honda[SmartCare]/ListAccessoriesViewController.h"; sourceTree = SOURCE_ROOT; };
-		A48E8F9C1C328836009825C1 /* ListAccessoriesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ListAccessoriesViewController.m; path = "Honda[SmartCare]/ListAccessoriesViewController.m"; sourceTree = SOURCE_ROOT; };
-		A48E8F9D1C328836009825C1 /* ListAccessoriesViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ListAccessoriesViewController.xib; path = "Honda[SmartCare]/ListAccessoriesViewController.xib"; sourceTree = SOURCE_ROOT; };
 		A48E8FA01C328F61009825C1 /* CollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CollectionViewCell.h; sourceTree = "<group>"; };
 		A48E8FA11C328F61009825C1 /* CollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CollectionViewCell.m; sourceTree = "<group>"; };
 		A48E8FA21C328F61009825C1 /* CollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CollectionViewCell.xib; sourceTree = "<group>"; };
+		A4ECE1FA1C34FEC4005E493A /* ConfirmRepairTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConfirmRepairTableViewCell.h; sourceTree = "<group>"; };
+		A4ECE1FB1C34FEC4005E493A /* ConfirmRepairTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConfirmRepairTableViewCell.m; sourceTree = "<group>"; };
+		A4ECE1FC1C34FEC4005E493A /* ConfirmRepairTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ConfirmRepairTableViewCell.xib; sourceTree = "<group>"; };
+		A4ECE2001C35028B005E493A /* onboard_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = onboard_icon.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -677,6 +709,7 @@
 		4CD7C68C1C2E36E300F0F589 /* Honda[SmartCare] */ = {
 			isa = PBXGroup;
 			children = (
+				A4ECE1FF1C35028B005E493A /* Resource */,
 				4CD7C6A41C2E390200F0F589 /* MVC */,
 				4CD7C6AC1C2E390200F0F589 /* Resources */,
 				4CD7C6AE1C2E390200F0F589 /* ThirdParty */,
@@ -715,7 +748,7 @@
 		4CD7C6A51C2E390200F0F589 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				A48E8F7C1C327933009825C1 /* ListAccessories */,
+				4CFA663E1C377923009424BF /* ListAccessories */,
 				4CD7C6A61C2E390200F0F589 /* Login */,
 				4CD7C6A71C2E390200F0F589 /* MenuController */,
 				4CD7C6A81C2E390200F0F589 /* RootController */,
@@ -755,6 +788,8 @@
 		4CD7C6AA1C2E390200F0F589 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				4CFA664A1C378070009424BF /* HondaDataItem.h */,
+				4CFA664B1C378070009424BF /* HondaDataItem.m */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -762,6 +797,7 @@
 		4CD7C6AB1C2E390200F0F589 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				A4ECE1F71C34FE9D005E493A /* ConfirmRepairCell */,
 				A48E8F921C32814E009825C1 /* CollectionViewCell */,
 				A48E8F8C1C3280D2009825C1 /* HeaderTableView */,
 				A48E8F871C327CBE009825C1 /* AccessoryStatusTableViewCell.h */,
@@ -789,6 +825,7 @@
 		4CD7C6AE1C2E390200F0F589 /* ThirdParty */ = {
 			isa = PBXGroup;
 			children = (
+				4CFA66251C376DC0009424BF /* SWTableViewCell */,
 				4C9258141C34C0F700D9796F /* iOSUILib */,
 				4C2D0BB31C336E320096DF55 /* SDWebImage */,
 				4C263BAA1C32AE2F0027EE05 /* MFSideMenu */,
@@ -988,6 +1025,35 @@
 			path = UIView;
 			sourceTree = "<group>";
 		};
+		4CFA66251C376DC0009424BF /* SWTableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				4CFA66261C376DC0009424BF /* NSMutableArray+SWUtilityButtons.h */,
+				4CFA66271C376DC0009424BF /* NSMutableArray+SWUtilityButtons.m */,
+				4CFA66281C376DC0009424BF /* SWCellScrollView.h */,
+				4CFA66291C376DC0009424BF /* SWCellScrollView.m */,
+				4CFA662A1C376DC0009424BF /* SWLongPressGestureRecognizer.h */,
+				4CFA662B1C376DC0009424BF /* SWLongPressGestureRecognizer.m */,
+				4CFA662C1C376DC0009424BF /* SWTableViewCell.h */,
+				4CFA662D1C376DC0009424BF /* SWTableViewCell.m */,
+				4CFA662E1C376DC0009424BF /* SWUtilityButtonTapGestureRecognizer.h */,
+				4CFA662F1C376DC0009424BF /* SWUtilityButtonTapGestureRecognizer.m */,
+				4CFA66301C376DC0009424BF /* SWUtilityButtonView.h */,
+				4CFA66311C376DC0009424BF /* SWUtilityButtonView.m */,
+			);
+			path = SWTableViewCell;
+			sourceTree = "<group>";
+		};
+		4CFA663E1C377923009424BF /* ListAccessories */ = {
+			isa = PBXGroup;
+			children = (
+				4CFA663F1C377923009424BF /* ListAccessoriesViewController.h */,
+				4CFA66401C377923009424BF /* ListAccessoriesViewController.m */,
+				4CFA66411C377923009424BF /* ListAccessoriesViewController.xib */,
+			);
+			path = ListAccessories;
+			sourceTree = "<group>";
+		};
 		A48E8F781C327850009825C1 /* YLProgressBar */ = {
 			isa = PBXGroup;
 			children = (
@@ -995,16 +1061,6 @@
 				A48E8F7A1C327850009825C1 /* YLProgressBar.m */,
 			);
 			path = YLProgressBar;
-			sourceTree = "<group>";
-		};
-		A48E8F7C1C327933009825C1 /* ListAccessories */ = {
-			isa = PBXGroup;
-			children = (
-				A48E8F9B1C328836009825C1 /* ListAccessoriesViewController.h */,
-				A48E8F9C1C328836009825C1 /* ListAccessoriesViewController.m */,
-				A48E8F9D1C328836009825C1 /* ListAccessoriesViewController.xib */,
-			);
-			name = ListAccessories;
 			sourceTree = "<group>";
 		};
 		A48E8F8C1C3280D2009825C1 /* HeaderTableView */ = {
@@ -1028,6 +1084,27 @@
 			name = CollectionViewCell;
 			path = "Honda[SmartCare]/View/CollectionViewCell";
 			sourceTree = SOURCE_ROOT;
+		};
+		A4ECE1F71C34FE9D005E493A /* ConfirmRepairCell */ = {
+			isa = PBXGroup;
+			children = (
+				A4ECE1FA1C34FEC4005E493A /* ConfirmRepairTableViewCell.h */,
+				A4ECE1FB1C34FEC4005E493A /* ConfirmRepairTableViewCell.m */,
+				A4ECE1FC1C34FEC4005E493A /* ConfirmRepairTableViewCell.xib */,
+			);
+			name = ConfirmRepairCell;
+			path = "Honda[SmartCare]/View/ConfirmRepairCell";
+			sourceTree = SOURCE_ROOT;
+		};
+		A4ECE1FF1C35028B005E493A /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				4CFA663A1C3774FD009424BF /* star_64_blue.png */,
+				4CFA663B1C3774FD009424BF /* star_64_empty_blue.png */,
+				A4ECE2001C35028B005E493A /* onboard_icon.png */,
+			);
+			path = Resource;
+			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
@@ -1112,10 +1189,14 @@
 				A48E8F8B1C327CBE009825C1 /* AccessoryStatusTableViewCell.xib in Resources */,
 				A48E8FA41C328F61009825C1 /* CollectionViewCell.xib in Resources */,
 				4CD7C69D1C2E36E300F0F589 /* LaunchScreen.storyboard in Resources */,
+				4CFA66431C377923009424BF /* ListAccessoriesViewController.xib in Resources */,
+				4CFA663D1C3774FD009424BF /* star_64_empty_blue.png in Resources */,
+				A4ECE1FE1C34FEC4005E493A /* ConfirmRepairTableViewCell.xib in Resources */,
+				A4ECE2011C35028B005E493A /* onboard_icon.png in Resources */,
 				4CD7C69A1C2E36E300F0F589 /* Assets.xcassets in Resources */,
 				4CD7C6981C2E36E300F0F589 /* Main.storyboard in Resources */,
 				A48E8F911C3280D2009825C1 /* Header.xib in Resources */,
-				A48E8F9F1C328836009825C1 /* ListAccessoriesViewController.xib in Resources */,
+				4CFA663C1C3774FD009424BF /* star_64_blue.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1134,11 +1215,13 @@
 				4C2D0BDC1C336E320096DF55 /* SDWebImageManager.m in Sources */,
 				4C92588D1C34C0F700D9796F /* MDSwitch.m in Sources */,
 				A48E8F901C3280D2009825C1 /* Header.m in Sources */,
+				4CFA66341C376DC0009424BF /* SWLongPressGestureRecognizer.m in Sources */,
 				4C9258931C34C0F700D9796F /* MDTouchGestureRecognizer.m in Sources */,
 				4CD7C6E61C2E390300F0F589 /* UIProgressView+AFNetworking.m in Sources */,
 				A48E8F8A1C327CBE009825C1 /* AccessoryStatusTableViewCell.m in Sources */,
 				4C263BB31C32AE2F0027EE05 /* MFSideMenuShadow.m in Sources */,
 				4CD7C6DD1C2E390300F0F589 /* AFURLSessionManager.m in Sources */,
+				4CFA664C1C378070009424BF /* HondaDataItem.m in Sources */,
 				4CF0ADDD1C32DCC100B2EB33 /* UIAlertView+CompleteBlock.m in Sources */,
 				4C2D0BE11C336E320096DF55 /* UIImage+WebP.m in Sources */,
 				4C9258821C34C0F700D9796F /* MDMathHelper.m in Sources */,
@@ -1147,7 +1230,6 @@
 				4CD7C6E51C2E390300F0F589 /* UIImageView+AFNetworking.m in Sources */,
 				4C9258801C34C0F700D9796F /* NSDate+MDExtension.m in Sources */,
 				4CD7C6951C2E36E300F0F589 /* ViewController.m in Sources */,
-				A48E8F9E1C328836009825C1 /* ListAccessoriesViewController.m in Sources */,
 				4CD7C6E41C2E390300F0F589 /* UIButton+AFNetworking.m in Sources */,
 				4CF0ADDF1C32DCC100B2EB33 /* UIDevice-Hardware.m in Sources */,
 				4C263BA71C32ADAB0027EE05 /* MBProgressHUD.m in Sources */,
@@ -1159,6 +1241,7 @@
 				4C92589B1C34C0F700D9796F /* MDSuggestPopupView.m in Sources */,
 				4C92588F1C34C0F700D9796F /* MDTabBarViewController.m in Sources */,
 				4C9258751C34C0F700D9796F /* AutoResizeTextView.m in Sources */,
+				4CFA66331C376DC0009424BF /* SWCellScrollView.m in Sources */,
 				4C263BA31C32ADAB0027EE05 /* FMDatabaseAdditions.m in Sources */,
 				4C9258991C34C0F700D9796F /* MDSliderThumbView.m in Sources */,
 				4C92587E1C34C0F700D9796F /* MDTimePickerDialog.m in Sources */,
@@ -1173,6 +1256,7 @@
 				4C9258831C34C0F700D9796F /* NSDateHelper.m in Sources */,
 				4CD7C6E71C2E390300F0F589 /* UIRefreshControl+AFNetworking.m in Sources */,
 				4C263BA51C32ADAB0027EE05 /* FMDatabaseQueue.m in Sources */,
+				4CFA66371C376DC0009424BF /* SWUtilityButtonView.m in Sources */,
 				4C2D0BD71C336E320096DF55 /* SDImageCache.m in Sources */,
 				4C2D0BD81C336E320096DF55 /* SDWebImageCompat.m in Sources */,
 				4C9258911C34C0F700D9796F /* MDTextField.m in Sources */,
@@ -1182,7 +1266,9 @@
 				4C9258781C34C0F700D9796F /* MDCalendarDateHeader.m in Sources */,
 				4C2D0BDD1C336E320096DF55 /* SDWebImagePrefetcher.m in Sources */,
 				4C2D0BE01C336E320096DF55 /* UIImage+MultiFormat.m in Sources */,
+				4CFA66361C376DC0009424BF /* SWUtilityButtonTapGestureRecognizer.m in Sources */,
 				4C92587C1C34C0F700D9796F /* MDDatePicker.m in Sources */,
+				A4ECE1FD1C34FEC4005E493A /* ConfirmRepairTableViewCell.m in Sources */,
 				4C9258761C34C0F700D9796F /* MDCalendar.m in Sources */,
 				4C9258871C34C0F700D9796F /* MDButton.m in Sources */,
 				4C92587D1C34C0F700D9796F /* MDDatePickerDialog.m in Sources */,
@@ -1215,7 +1301,9 @@
 				4C92588B1C34C0F700D9796F /* MDSlider.m in Sources */,
 				4CD7C6DC1C2E390300F0F589 /* AFURLResponseSerialization.m in Sources */,
 				4CD7C6D81C2E390300F0F589 /* AFHTTPSessionManager.m in Sources */,
+				4CFA66421C377923009424BF /* ListAccessoriesViewController.m in Sources */,
 				4C2D0BD61C336E320096DF55 /* NSData+ImageContentType.m in Sources */,
+				4CFA66351C376DC0009424BF /* SWTableViewCell.m in Sources */,
 				4CD7C6E11C2E390300F0F589 /* AFImageDownloader.m in Sources */,
 				4CF0ADDE1C32DCC100B2EB33 /* UIDevice+Hardware.m in Sources */,
 				4C2D0BDB1C336E320096DF55 /* SDWebImageDownloaderOperation.m in Sources */,
@@ -1223,6 +1311,7 @@
 				4C92587A1C34C0F700D9796F /* MDCalendarYearSelector.m in Sources */,
 				4C9258921C34C0F700D9796F /* MDToast.m in Sources */,
 				4C9258941C34C0F700D9796F /* MDCircularProgressLayer.m in Sources */,
+				4CFA66321C376DC0009424BF /* NSMutableArray+SWUtilityButtons.m in Sources */,
 				4C92589A1C34C0F700D9796F /* MDSliderTickMarksView.m in Sources */,
 				4C2D0BDA1C336E320096DF55 /* SDWebImageDownloader.m in Sources */,
 				4CD7C6E31C2E390300F0F589 /* UIActivityIndicatorView+AFNetworking.m in Sources */,
@@ -1341,6 +1430,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Honda[SmartCare]/ThirdParty/Parse",
+					"$(PROJECT_DIR)/Honda[SmartCare]/ThirdParty/PZSpeed",
 				);
 				INFOPLIST_FILE = "Honda[SmartCare]/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
@@ -1357,6 +1447,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Honda[SmartCare]/ThirdParty/Parse",
+					"$(PROJECT_DIR)/Honda[SmartCare]/ThirdParty/PZSpeed",
 				);
 				INFOPLIST_FILE = "Honda[SmartCare]/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.1;

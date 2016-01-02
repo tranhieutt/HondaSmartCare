@@ -8,7 +8,8 @@
 
 #import <UIKit/UIKit.h>
 #import "YLProgressBar.h"
-@interface AccessoryStatusTableViewCell : UITableViewCell
+#import "SWTableViewCell.h"
+@interface AccessoryStatusTableViewCell : SWTableViewCell
 @property (weak, nonatomic) IBOutlet YLProgressBar *progressBar;
 @property (weak, nonatomic) IBOutlet UILabel *labelName;
 

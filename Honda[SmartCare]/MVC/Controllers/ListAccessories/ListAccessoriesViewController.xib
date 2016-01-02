@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ListAccessoriesViewController">
+            <connections>
+                <outlet property="collectionView" destination="FjC-Ml-9qg" id="72w-UE-NTm"/>
+                <outlet property="tableView" destination="EQ8-lt-Pux" id="Iy0-KS-Fja"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="60g-Xv-bkK">
+                    <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                    <subviews>
+                        <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="EQ8-lt-Pux">
+                            <rect key="frame" x="0.0" y="80" width="600" height="520"/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        </tableView>
+                        <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="FjC-Ml-9qg">
+                            <rect key="frame" x="0.0" y="0.0" width="600" height="72"/>
+                            <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="72" id="Zuq-Xw-SQV"/>
+                            </constraints>
+                            <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="5" minimumInteritemSpacing="5" id="Ioe-Tk-dbL">
+                                <size key="itemSize" width="72" height="72"/>
+                                <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                            </collectionViewFlowLayout>
+                        </collectionView>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstItem="EQ8-lt-Pux" firstAttribute="centerX" secondItem="60g-Xv-bkK" secondAttribute="centerX" id="8jP-ca-cZr"/>
+                        <constraint firstItem="FjC-Ml-9qg" firstAttribute="centerX" secondItem="60g-Xv-bkK" secondAttribute="centerX" id="L0f-dm-smJ"/>
+                        <constraint firstItem="EQ8-lt-Pux" firstAttribute="width" secondItem="60g-Xv-bkK" secondAttribute="width" id="NY2-FH-JrH"/>
+                        <constraint firstItem="FjC-Ml-9qg" firstAttribute="width" secondItem="60g-Xv-bkK" secondAttribute="width" id="QRN-46-aCz"/>
+                        <constraint firstItem="FjC-Ml-9qg" firstAttribute="leading" secondItem="60g-Xv-bkK" secondAttribute="leading" id="Slj-eL-DqT"/>
+                        <constraint firstItem="EQ8-lt-Pux" firstAttribute="top" secondItem="FjC-Ml-9qg" secondAttribute="bottom" constant="8" id="XMV-IV-eKy"/>
+                        <constraint firstAttribute="bottom" secondItem="EQ8-lt-Pux" secondAttribute="bottom" id="xoH-VI-Lo4"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="60g-Xv-bkK" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="LT5-zD-OrP"/>
+                <constraint firstItem="60g-Xv-bkK" firstAttribute="width" secondItem="i5M-Pr-FkT" secondAttribute="width" id="NDP-2d-SrD"/>
+                <constraint firstItem="FjC-Ml-9qg" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="NF2-RD-aAW"/>
+                <constraint firstItem="60g-Xv-bkK" firstAttribute="height" secondItem="i5M-Pr-FkT" secondAttribute="height" id="gmn-e4-JzV"/>
+                <constraint firstItem="60g-Xv-bkK" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="mPM-4B-qxG"/>
+            </constraints>
+            <point key="canvasLocation" x="147" y="244"/>
+        </view>
+    </objects>
+</document>
