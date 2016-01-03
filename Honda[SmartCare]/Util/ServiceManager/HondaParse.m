@@ -77,13 +77,14 @@
     NSData *data = UIImageJPEGRepresentation(image,1);
     PFFile *imageFile = [PFFile fileWithName:@"denchieuhau.jpg" data:data];
     hondaItem[@"imageFile"] = imageFile;
-    
     [hondaItem saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
         if (succeeded) {
             // The object has been saved.
+            completion(succeeded);
             
         } else {
             // There was a problem, check error.description
+            
         }
     }];
 
@@ -94,9 +95,15 @@
 //    multi delete
 //    [PFObject deleteAllInBackground:@[object1, object2, object3]];
     [hondaItem deleteInBackgroundWithBlock:^(BOOL succeeded, NSError * _Nullable error) {
-        
+        if (succeeded) {
+            // The object has been saved.
+            completion(succeeded);
+            
+        } else {
+            // There was a problem, check error.description
+            
+        }
     }];
-    
 }
 - (NSMutableArray *)convertPFObjectToHondaDataItem:(NSArray *)listPFObjects{
     NSMutableArray *array = [[NSMutableArray alloc] init];

@@ -13,7 +13,7 @@
 
 @interface HondaParse : NSObject
 + (HondaParse *)sharedInstance;
-- (void)getGroupAccessory:(UIImageView*)imageView withCompletion:(void(^)(BOOL success))completion failure:(void(^)(HondaFailureCode failureCode))failure;
+-(void)getGroupAccessory:(NSString *)groupAccessoryName withCompletion:(void(^)(BOOL success))completion failure:(void(^)(HondaFailureCode failureCode))failure;
 - (void)addAccessory:(HondaDataItem *)hondaDataItem withCompletion:(void(^)(BOOL success))completion failure:(void(^)(HondaFailureCode failureCode))failure;
 - (void)deleteAccessory:(HondaDataItem *)hondaDataItem withCompletion:(void(^)(BOOL success))completion failure:(void(^)(HondaFailureCode failureCode))failure;
 @end
