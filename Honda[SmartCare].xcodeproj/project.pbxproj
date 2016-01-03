@@ -34,6 +34,13 @@
 		4C2D0BE31C336E320096DF55 /* UIImageView+WebCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C2D0BD21C336E320096DF55 /* UIImageView+WebCache.m */; };
 		4C2D0BE41C336E320096DF55 /* UIView+WebCacheOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C2D0BD41C336E320096DF55 /* UIView+WebCacheOperation.m */; };
 		4C2D0BE71C33715E0096DF55 /* HondaParse.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C2D0BE61C33715E0096DF55 /* HondaParse.m */; };
+		4C58E8291C3971CA005DFEB6 /* UIAlertView+Blocks.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C58E8191C3971CA005DFEB6 /* UIAlertView+Blocks.m */; };
+		4C58E82A1C3971CA005DFEB6 /* CustomColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C58E81C1C3971CA005DFEB6 /* CustomColor.m */; };
+		4C58E82B1C3971CA005DFEB6 /* RZSplitViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C58E81F1C3971CA005DFEB6 /* RZSplitViewController.m */; };
+		4C58E82C1C3971CA005DFEB6 /* TPKeyboardAvoidingCollectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C58E8221C3971CA005DFEB6 /* TPKeyboardAvoidingCollectionView.m */; };
+		4C58E82D1C3971CA005DFEB6 /* TPKeyboardAvoidingScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C58E8241C3971CA005DFEB6 /* TPKeyboardAvoidingScrollView.m */; };
+		4C58E82E1C3971CA005DFEB6 /* TPKeyboardAvoidingTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C58E8261C3971CA005DFEB6 /* TPKeyboardAvoidingTableView.m */; };
+		4C58E82F1C3971CA005DFEB6 /* UIScrollView+TPKeyboardAvoidingAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C58E8281C3971CA005DFEB6 /* UIScrollView+TPKeyboardAvoidingAdditions.m */; };
 		4C9258751C34C0F700D9796F /* AutoResizeTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C9258171C34C0F700D9796F /* AutoResizeTextView.m */; };
 		4C9258761C34C0F700D9796F /* MDCalendar.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C92581A1C34C0F700D9796F /* MDCalendar.m */; };
 		4C9258771C34C0F700D9796F /* MDCalendarCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C92581C1C34C0F700D9796F /* MDCalendarCell.m */; };
@@ -219,6 +226,20 @@
 		4C2D0BD41C336E320096DF55 /* UIView+WebCacheOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+WebCacheOperation.m"; sourceTree = "<group>"; };
 		4C2D0BE51C33715E0096DF55 /* HondaParse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HondaParse.h; sourceTree = "<group>"; };
 		4C2D0BE61C33715E0096DF55 /* HondaParse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HondaParse.m; sourceTree = "<group>"; };
+		4C58E8181C3971CA005DFEB6 /* UIAlertView+Blocks.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIAlertView+Blocks.h"; sourceTree = "<group>"; };
+		4C58E8191C3971CA005DFEB6 /* UIAlertView+Blocks.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIAlertView+Blocks.m"; sourceTree = "<group>"; };
+		4C58E81B1C3971CA005DFEB6 /* CustomColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomColor.h; sourceTree = "<group>"; };
+		4C58E81C1C3971CA005DFEB6 /* CustomColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomColor.m; sourceTree = "<group>"; };
+		4C58E81E1C3971CA005DFEB6 /* RZSplitViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RZSplitViewController.h; sourceTree = "<group>"; };
+		4C58E81F1C3971CA005DFEB6 /* RZSplitViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RZSplitViewController.m; sourceTree = "<group>"; };
+		4C58E8211C3971CA005DFEB6 /* TPKeyboardAvoidingCollectionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TPKeyboardAvoidingCollectionView.h; sourceTree = "<group>"; };
+		4C58E8221C3971CA005DFEB6 /* TPKeyboardAvoidingCollectionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TPKeyboardAvoidingCollectionView.m; sourceTree = "<group>"; };
+		4C58E8231C3971CA005DFEB6 /* TPKeyboardAvoidingScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TPKeyboardAvoidingScrollView.h; sourceTree = "<group>"; };
+		4C58E8241C3971CA005DFEB6 /* TPKeyboardAvoidingScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TPKeyboardAvoidingScrollView.m; sourceTree = "<group>"; };
+		4C58E8251C3971CA005DFEB6 /* TPKeyboardAvoidingTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TPKeyboardAvoidingTableView.h; sourceTree = "<group>"; };
+		4C58E8261C3971CA005DFEB6 /* TPKeyboardAvoidingTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TPKeyboardAvoidingTableView.m; sourceTree = "<group>"; };
+		4C58E8271C3971CA005DFEB6 /* UIScrollView+TPKeyboardAvoidingAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIScrollView+TPKeyboardAvoidingAdditions.h"; sourceTree = "<group>"; };
+		4C58E8281C3971CA005DFEB6 /* UIScrollView+TPKeyboardAvoidingAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIScrollView+TPKeyboardAvoidingAdditions.m"; sourceTree = "<group>"; };
 		4C9258161C34C0F700D9796F /* AutoResizeTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AutoResizeTextView.h; sourceTree = "<group>"; };
 		4C9258171C34C0F700D9796F /* AutoResizeTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AutoResizeTextView.m; sourceTree = "<group>"; };
 		4C9258191C34C0F700D9796F /* MDCalendar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MDCalendar.h; sourceTree = "<group>"; };
@@ -533,6 +554,48 @@
 			path = SDWebImage;
 			sourceTree = "<group>";
 		};
+		4C58E8171C3971CA005DFEB6 /* BlocksKit */ = {
+			isa = PBXGroup;
+			children = (
+				4C58E8181C3971CA005DFEB6 /* UIAlertView+Blocks.h */,
+				4C58E8191C3971CA005DFEB6 /* UIAlertView+Blocks.m */,
+			);
+			path = BlocksKit;
+			sourceTree = "<group>";
+		};
+		4C58E81A1C3971CA005DFEB6 /* CustomColor */ = {
+			isa = PBXGroup;
+			children = (
+				4C58E81B1C3971CA005DFEB6 /* CustomColor.h */,
+				4C58E81C1C3971CA005DFEB6 /* CustomColor.m */,
+			);
+			path = CustomColor;
+			sourceTree = "<group>";
+		};
+		4C58E81D1C3971CA005DFEB6 /* RZSplitViewController */ = {
+			isa = PBXGroup;
+			children = (
+				4C58E81E1C3971CA005DFEB6 /* RZSplitViewController.h */,
+				4C58E81F1C3971CA005DFEB6 /* RZSplitViewController.m */,
+			);
+			path = RZSplitViewController;
+			sourceTree = "<group>";
+		};
+		4C58E8201C3971CA005DFEB6 /* TPKeyboardAvoiding */ = {
+			isa = PBXGroup;
+			children = (
+				4C58E8211C3971CA005DFEB6 /* TPKeyboardAvoidingCollectionView.h */,
+				4C58E8221C3971CA005DFEB6 /* TPKeyboardAvoidingCollectionView.m */,
+				4C58E8231C3971CA005DFEB6 /* TPKeyboardAvoidingScrollView.h */,
+				4C58E8241C3971CA005DFEB6 /* TPKeyboardAvoidingScrollView.m */,
+				4C58E8251C3971CA005DFEB6 /* TPKeyboardAvoidingTableView.h */,
+				4C58E8261C3971CA005DFEB6 /* TPKeyboardAvoidingTableView.m */,
+				4C58E8271C3971CA005DFEB6 /* UIScrollView+TPKeyboardAvoidingAdditions.h */,
+				4C58E8281C3971CA005DFEB6 /* UIScrollView+TPKeyboardAvoidingAdditions.m */,
+			);
+			path = TPKeyboardAvoiding;
+			sourceTree = "<group>";
+		};
 		4C9258141C34C0F700D9796F /* iOSUILib */ = {
 			isa = PBXGroup;
 			children = (
@@ -825,6 +888,10 @@
 		4CD7C6AE1C2E390200F0F589 /* ThirdParty */ = {
 			isa = PBXGroup;
 			children = (
+				4C58E8171C3971CA005DFEB6 /* BlocksKit */,
+				4C58E81A1C3971CA005DFEB6 /* CustomColor */,
+				4C58E81D1C3971CA005DFEB6 /* RZSplitViewController */,
+				4C58E8201C3971CA005DFEB6 /* TPKeyboardAvoiding */,
 				4CFA66251C376DC0009424BF /* SWTableViewCell */,
 				4C9258141C34C0F700D9796F /* iOSUILib */,
 				4C2D0BB31C336E320096DF55 /* SDWebImage */,
@@ -1137,6 +1204,7 @@
 				TargetAttributes = {
 					4CD7C6891C2E36E300F0F589 = {
 						CreatedOnToolsVersion = 7.2;
+						DevelopmentTeam = XD9ALJD5P6;
 					};
 				};
 			};
@@ -1212,6 +1280,7 @@
 				4C2D0BD51C336E320096DF55 /* MKAnnotationView+WebCache.m in Sources */,
 				4CD7C7001C2E3D8900F0F589 /* HondaAccess.m in Sources */,
 				4C92588A1C34C0F700D9796F /* MDRippleLayer.m in Sources */,
+				4C58E82F1C3971CA005DFEB6 /* UIScrollView+TPKeyboardAvoidingAdditions.m in Sources */,
 				4C2D0BDC1C336E320096DF55 /* SDWebImageManager.m in Sources */,
 				4C92588D1C34C0F700D9796F /* MDSwitch.m in Sources */,
 				A48E8F901C3280D2009825C1 /* Header.m in Sources */,
@@ -1222,8 +1291,10 @@
 				4C263BB31C32AE2F0027EE05 /* MFSideMenuShadow.m in Sources */,
 				4CD7C6DD1C2E390300F0F589 /* AFURLSessionManager.m in Sources */,
 				4CFA664C1C378070009424BF /* HondaDataItem.m in Sources */,
+				4C58E82D1C3971CA005DFEB6 /* TPKeyboardAvoidingScrollView.m in Sources */,
 				4CF0ADDD1C32DCC100B2EB33 /* UIAlertView+CompleteBlock.m in Sources */,
 				4C2D0BE11C336E320096DF55 /* UIImage+WebP.m in Sources */,
+				4C58E8291C3971CA005DFEB6 /* UIAlertView+Blocks.m in Sources */,
 				4C9258821C34C0F700D9796F /* MDMathHelper.m in Sources */,
 				4CD7C6E81C2E390300F0F589 /* UIWebView+AFNetworking.m in Sources */,
 				A48E8FA31C328F61009825C1 /* CollectionViewCell.m in Sources */,
@@ -1292,9 +1363,11 @@
 				4C263BB21C32AE2F0027EE05 /* MFSideMenuContainerViewController.m in Sources */,
 				4CD7C6DA1C2E390300F0F589 /* AFSecurityPolicy.m in Sources */,
 				4CD7C6DB1C2E390300F0F589 /* AFURLRequestSerialization.m in Sources */,
+				4C58E82A1C3971CA005DFEB6 /* CustomColor.m in Sources */,
 				4C9258811C34C0F700D9796F /* MDDeviceHelper.m in Sources */,
 				4CF0ADB91C32DC5400B2EB33 /* DownloadManager.m in Sources */,
 				4C92588C1C34C0F700D9796F /* MDSnackbar.m in Sources */,
+				4C58E82E1C3971CA005DFEB6 /* TPKeyboardAvoidingTableView.m in Sources */,
 				4C9258971C34C0F700D9796F /* MDBubbleLabel.m in Sources */,
 				4C2D0BE41C336E320096DF55 /* UIView+WebCacheOperation.m in Sources */,
 				4CD7C6E21C2E390300F0F589 /* AFNetworkActivityIndicatorManager.m in Sources */,
@@ -1310,11 +1383,13 @@
 				4C263BA61C32ADAB0027EE05 /* FMResultSet.m in Sources */,
 				4C92587A1C34C0F700D9796F /* MDCalendarYearSelector.m in Sources */,
 				4C9258921C34C0F700D9796F /* MDToast.m in Sources */,
+				4C58E82B1C3971CA005DFEB6 /* RZSplitViewController.m in Sources */,
 				4C9258941C34C0F700D9796F /* MDCircularProgressLayer.m in Sources */,
 				4CFA66321C376DC0009424BF /* NSMutableArray+SWUtilityButtons.m in Sources */,
 				4C92589A1C34C0F700D9796F /* MDSliderTickMarksView.m in Sources */,
 				4C2D0BDA1C336E320096DF55 /* SDWebImageDownloader.m in Sources */,
 				4CD7C6E31C2E390300F0F589 /* UIActivityIndicatorView+AFNetworking.m in Sources */,
+				4C58E82C1C3971CA005DFEB6 /* TPKeyboardAvoidingCollectionView.m in Sources */,
 				4C9258791C34C0F700D9796F /* MDCalendarHeader.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1358,7 +1433,8 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Hoang Duc Thinh (QE8JQKY3UT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Hoang Duc Thinh (QE8JQKY3UT)";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -1380,6 +1456,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
+				PROVISIONING_PROFILE = "2c7e50e9-deb3-405d-859b-ff46ae5d486c";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -1402,7 +1479,8 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Hoang Duc Thinh (QE8JQKY3UT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Hoang Duc Thinh (QE8JQKY3UT)";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
@@ -1417,6 +1495,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
 				MTL_ENABLE_DEBUG_INFO = NO;
+				PROVISIONING_PROFILE = "2c7e50e9-deb3-405d-859b-ff46ae5d486c";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
@@ -1427,6 +1506,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Honda[SmartCare]/ThirdParty/Parse",
@@ -1444,6 +1524,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Honda[SmartCare]/ThirdParty/Parse",
