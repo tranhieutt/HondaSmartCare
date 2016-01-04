@@ -9,8 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "SWTableViewCell.h"
 
-@interface ListAccessoriesViewController : UIViewController <UITableViewDataSource,UITableViewDelegate,UICollectionViewDataSource,UICollectionViewDelegate,SWTableViewCellDelegate>
-@property (weak, nonatomic) IBOutlet UICollectionView *collectionView;
+@interface ListAccessoriesViewController : UIViewController <UITableViewDataSource,UITableViewDelegate,SWTableViewCellDelegate>
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 
 @end

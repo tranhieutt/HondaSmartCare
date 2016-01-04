@@ -9,11 +9,14 @@
 #import <Foundation/Foundation.h>
 #import <Parse/Parse.h>
 #import "HondaAppContant.h"
-#import "HOndaDataItem.h"
+#import "HondaDataItem.h"
+#import "HondaUser.h"
+
 
 @interface HondaParse : NSObject
 + (HondaParse *)sharedInstance;
--(void)getGroupAccessory:(NSString *)groupAccessoryName withCompletion:(void(^)(BOOL success))completion failure:(void(^)(HondaFailureCode failureCode))failure;
+-(void)getGroupAccessory:(NSString *)groupAccessoryName withCompletion:(void(^)(NSArray *array))completion failure:(void(^)(HondaFailureCode failureCode))failure;
 - (void)addAccessory:(HondaDataItem *)hondaDataItem withCompletion:(void(^)(BOOL success))completion failure:(void(^)(HondaFailureCode failureCode))failure;
 - (void)deleteAccessory:(HondaDataItem *)hondaDataItem withCompletion:(void(^)(BOOL success))completion failure:(void(^)(HondaFailureCode failureCode))failure;
+- (void)getListUser:(void(^)(NSArray *array))completion failure:(void(^)(HondaFailureCode failureCode))failure;
 @end

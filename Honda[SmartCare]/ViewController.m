@@ -135,10 +135,41 @@
 //        
 //    }];
 
+    // Create our Installation query
+    PFQuery *pushQuery = [PFInstallation query];
+    [pushQuery whereKey:@"deviceType" equalTo:@"ios"];
+    
+    // Send push notification to query
+    [PFPush sendPushMessageToQueryInBackground:pushQuery
+                                   withMessage:@"Hello World!"];
+    
+//    PFQuery *qry = [PFUser query];
+//    [qry getObjectWithId: @"Nbdt5pdifT"];
+//    
+//    PFQuery *pushQuery = [PFInstallation query];
+//    [pushQuery whereKey:@"user" matchesQuery:qry];
+    
+    // Send push notification to query
+//    PFPush *push = [[PFPush alloc] init];
+//    [push setQuery:pushQuery]; // Set our Installation query
+//    NSDictionary *data = [NSDictionary dictionaryWithObjectsAndKeys:
+//                          @"A New Push Message was Put HERE!", @"alert",
+//                          @"ursound.caf", @"sound",
+//                          @"Increment", @"badge",
+//                          @"Optionally a type was set", @"type",
+//                          nil];
+//    [push setData:data];
+    
+    
+//    [push sendPushInBackgroundWithBlock:^(BOOL succeeded, NSError * _Nullable error) {
+//        NSLog(@"");
+//    }];
+    
+   
 }
 - (IBAction)buttonClick:(id)sender {
-    ListAccessoriesViewController *view = [[ListAccessoriesViewController alloc]initWithNibName:@"ListAccessoriesViewController" bundle:nil];
-    [self presentViewController:view animated:NO completion:nil];
+//    ListAccessoriesViewController *view = [[ListAccessoriesViewController alloc]initWithNibName:@"ListAccessoriesViewController" bundle:nil];
+//    [self presentViewController:view animated:NO completion:nil];
 }
 
 - (void)didReceiveMemoryWarning {

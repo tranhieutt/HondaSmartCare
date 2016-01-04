@@ -8,7 +8,10 @@
 
 #import "AppDelegate.h"
 #import "HondaAppContant.h"
+#import "LoginViewController.h"
 #import <Parse/Parse.h>
+#import "CommonUtility.h"
+
 
 
 @interface AppDelegate ()
@@ -50,6 +53,11 @@
     // Override point for customization after application launch.
     
 //    self.window.rootViewController = self.viewController;
+    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+//    LoginViewController *login = [[LoginViewController alloc] init];
+    self.window.backgroundColor = [UIColor blueColor];
+     self.window.rootViewController = [CommonUtility createHomeControllerByMFSideMenu];
+//    self.window.rootViewController = login;
     [self.window makeKeyAndVisible];
     
     if (application.applicationState != UIApplicationStateBackground) {
@@ -164,4 +172,11 @@
 //    // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
 //}
 
+//- (void)application:(UIApplication *)application didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken {
+//    // Store the deviceToken in the current installation and save it to Parse.
+//    PFInstallation *currentInstallation = [PFInstallation currentInstallation];
+//    [currentInstallation setDeviceTokenFromData:deviceToken];
+//    currentInstallation.channels = @[ @"global" ];
+//    [currentInstallation saveInBackground];
+//}
 @end

@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9531" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LoginViewController">
+            <connections>
+                <outlet property="btnLogin" destination="YTU-Xx-Qvp" id="hrX-yo-Nnq"/>
+                <outlet property="txtPassword" destination="Fzf-RL-9rK" id="CMc-09-FcP"/>
+                <outlet property="txtUsername" destination="Dzy-5N-HiJ" id="qMe-tl-oP2"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1Rg-vE-cfE">
+                    <rect key="frame" x="125" y="225" width="350" height="150"/>
+                    <subviews>
+                        <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Fzf-RL-9rK">
+                            <rect key="frame" x="0.0" y="80" width="350" height="40"/>
+                            <color key="backgroundColor" red="1" green="0.75647515328180659" blue="0.49658958751713811" alpha="1" colorSpace="calibratedRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="40" id="vCB-AR-z5W"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <textInputTraits key="textInputTraits"/>
+                        </textField>
+                        <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Username" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Dzy-5N-HiJ">
+                            <rect key="frame" x="0.0" y="30" width="350" height="40"/>
+                            <color key="backgroundColor" red="1" green="0.74255745644616034" blue="0.55635343105534818" alpha="1" colorSpace="calibratedRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="40" id="Xwy-TT-Jtp"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <textInputTraits key="textInputTraits"/>
+                        </textField>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstItem="Dzy-5N-HiJ" firstAttribute="centerX" secondItem="1Rg-vE-cfE" secondAttribute="centerX" id="Osi-Qk-Bn1"/>
+                        <constraint firstAttribute="height" constant="150" id="UAH-hj-cCZ"/>
+                        <constraint firstAttribute="bottom" secondItem="Fzf-RL-9rK" secondAttribute="bottom" constant="30" id="bUY-To-voB"/>
+                        <constraint firstItem="Dzy-5N-HiJ" firstAttribute="top" secondItem="1Rg-vE-cfE" secondAttribute="top" constant="30" id="dM9-Vc-q2s"/>
+                        <constraint firstItem="Fzf-RL-9rK" firstAttribute="centerX" secondItem="1Rg-vE-cfE" secondAttribute="centerX" id="iNT-Ik-ftg"/>
+                        <constraint firstItem="Fzf-RL-9rK" firstAttribute="leading" secondItem="1Rg-vE-cfE" secondAttribute="leading" id="jtc-vO-hkr"/>
+                        <constraint firstItem="Dzy-5N-HiJ" firstAttribute="leading" secondItem="1Rg-vE-cfE" secondAttribute="leading" id="o8U-4k-qUy"/>
+                        <constraint firstAttribute="width" constant="350" id="p9F-ez-m6T"/>
+                    </constraints>
+                </view>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="honda-128.png" translatesAutoresizingMaskIntoConstraints="NO" id="7p6-R2-pai">
+                    <rect key="frame" x="185" y="62" width="230" height="126"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="7p6-R2-pai" secondAttribute="height" multiplier="233:128" id="e5g-rA-gH3"/>
+                        <constraint firstAttribute="width" constant="230" id="x0h-ot-whj"/>
+                    </constraints>
+                </imageView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YTU-Xx-Qvp">
+                    <rect key="frame" x="125" y="413" width="350" height="34"/>
+                    <color key="backgroundColor" red="0.13303256216598425" green="0.63818974442193244" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="34" id="Edw-n9-pEQ"/>
+                    </constraints>
+                    <state key="normal" title="Login">
+                        <color key="titleColor" red="1" green="0.96995188562089485" blue="0.97713363517962137" alpha="1" colorSpace="calibratedRGB"/>
+                    </state>
+                    <connections>
+                        <action selector="loginSystem:" destination="-1" eventType="touchUpInside" id="HXC-La-F4w"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="0.94307682596221176" green="1" blue="0.91617075250507563" alpha="1" colorSpace="calibratedRGB"/>
+            <constraints>
+                <constraint firstItem="1Rg-vE-cfE" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="0p1-aP-ZAf"/>
+                <constraint firstItem="1Rg-vE-cfE" firstAttribute="top" secondItem="7p6-R2-pai" secondAttribute="bottom" constant="37" id="1mr-N9-XeF"/>
+                <constraint firstItem="YTU-Xx-Qvp" firstAttribute="width" secondItem="1Rg-vE-cfE" secondAttribute="width" id="3Il-b6-CxU"/>
+                <constraint firstItem="YTU-Xx-Qvp" firstAttribute="leading" secondItem="1Rg-vE-cfE" secondAttribute="leading" id="KVV-80-tYw"/>
+                <constraint firstItem="1Rg-vE-cfE" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="aXx-xX-bh5"/>
+                <constraint firstItem="7p6-R2-pai" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="hrO-W4-EbK"/>
+                <constraint firstItem="YTU-Xx-Qvp" firstAttribute="top" secondItem="1Rg-vE-cfE" secondAttribute="bottom" constant="38" id="vzo-JR-URl"/>
+            </constraints>
+        </view>
+    </objects>
+    <resources>
+        <image name="honda-128.png" width="128" height="128"/>
+    </resources>
+</document>

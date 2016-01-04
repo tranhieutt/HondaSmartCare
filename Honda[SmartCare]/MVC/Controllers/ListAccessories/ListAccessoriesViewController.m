@@ -10,6 +10,8 @@
 #import "CollectionViewCell.h"
 #import "AccessoryStatusTableViewCell.h"
 #import "Header.h"
+#import "HondaAccess.h"
+#import "HondaParse.h"
 @interface ListAccessoriesViewController ()
 
 @end
@@ -19,11 +21,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
-    self.collectionView.delegate = self;
-    self.collectionView.dataSource = self;
     self.tableView.delegate = self;
     self.tableView.dataSource = self;
-    [self.collectionView registerNib:[UINib nibWithNibName:@"CollectionViewCell" bundle:nil] forCellWithReuseIdentifier:@"CELL"];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -31,17 +30,7 @@
     // Dispose of any resources that can be recreated.
 }
 
-- (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView{
-    return 1;
-}
-- (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
-    return 6;
-}
-- (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath{
-    CollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"CELL" forIndexPath:indexPath];
-    //cell.cellLabel.text = [NSString stringWithFormat:@"cell %li",(long)indexPath.row];
-    return cell;
-}
+
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
     return 1;
 }
@@ -112,5 +101,24 @@
     [rightUtilityButtons sw_addUtilityButtonWithSpecial:NO normalIcon:@"star_64_empty_blue" selectedIcon:@"star_64_empty_blue" enabled:NO];
     return rightUtilityButtons;
 }
+#pragma mark - button click
+- (IBAction)buttonDienClick:(id)sender {
+    [[HondaParse sharedInstance] getGroupAccessory:@"Điện" withCompletion:^(NSArray *array) {
+        
+    } failure:^(HondaFailureCode failureCode) {
+        
+    }];
+
+}
+- (IBAction)buttonKhungClick:(id)sender {
+}
+- (IBAction)buttonNhienlieuClick:(id)sender {
+}
+- (IBAction)buttonDongcoClick:(id)sender {
+}
+- (IBAction)buttonOtherClick:(id)sender {
+}
+
+
 
 @end

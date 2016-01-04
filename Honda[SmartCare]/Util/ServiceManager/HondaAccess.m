@@ -47,10 +47,10 @@
             }
         } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
             if (failure) {
-                                dispatch_async(dispatch_get_main_queue(), ^{
-                                    failure(kHondaFailureNetwork);
-                                });
-                            }
+                dispatch_async(dispatch_get_main_queue(), ^{
+                    failure(kHondaFailureNetwork);
+                });
+            }
         }];
     });
 }
