@@ -130,6 +130,33 @@
         }
     }];
 }
+- (void)updateListAccessory:(NSArray *)listAccessory withCompletion:(void(^)(BOOL success))completion failure:(void(^)(HondaFailureCode failureCode))failure{
+    PFQuery *query = [PFQuery queryWithClassName:@"HondaItem"];
+    [query findObjectsInBackgroundWithBlock:^(NSArray * _Nullable objects, NSError * _Nullable error) {
+        NSMutableArray *saveAllOfMe = [NSMutableArray new];
+        [listAccessory enumerateObjectsUsingBlock:^(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+            HondaDataItem *hondaItem = (HondaDataItem *)obj;
+            for (PFObject *object in objects) {
+                if ([object.objectId isEqualToString:hondaItem.objectId]) {
+                    [self convertHondaDataItemToPFObject:hondaItem];
+                }
+                [saveAllOfMe addObject:object];
+            }
+        }];
+        [PFObject saveAllInBackground:saveAllOfMe block:^(BOOL success, NSError *error) {
+            // Check result of the operation, all objects should have been saved by now
+            if (success) {
+                // The object has been saved.
+                completion(success);
+            } else {
+                // There was a problem, check error.description
+                
+            }
+
+        }];
+    }];
+
+}
 -(void)deleteAccessory:(HondaDataItem *)hondaDataItem withCompletion:(void(^)(BOOL success))completion failure:(void(^)(HondaFailureCode failureCode))failure{
     PFObject *hondaItem = [PFObject objectWithClassName:@"HondaItem"];
     hondaItem.objectId = hondaDataItem.objectId;
@@ -184,5 +211,15 @@
     }];
     return array;
 }
-
+- (PFObject *)convertHondaDataItemToPFObject:(HondaDataItem *)hondaItem{
+    PFObject *pfOject = [PFObject objectWithClassName:@"HondaItem"];
+    pfOject[@"groupAccessary"] = hondaItem.groudAccessary;
+    pfOject[@"nameItem"]    = hondaItem.nameItem;
+    pfOject[@"description"] = hondaItem.descriptionDetail;
+    pfOject[@"renewPrice"]  = @(hondaItem.renewPrice);
+    pfOject[@"fixedPrice"]  = @(hondaItem.fixedPrice);
+    pfOject[@"startDate"]   = hondaItem.starDate;
+    pfOject[@"endDate"]     = hondaItem.endDate;
+    return pfOject;
+}
 @end
