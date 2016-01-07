@@ -10,6 +10,9 @@
 #import "MFSideMenu.h"
 #import "HondaCustomCellTableViewCell.h"
 #import "CommonUtility.h"
+#import <Parse/Parse.h>
+#import "NavigationView.h"
+#import "DetailViewController.h"
 
 @interface HomeViewController ()
 
@@ -20,13 +23,60 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
-    self.listData = [[NSMutableArray alloc]initWithObjects:
-              @"Data 1 in array",@"Data 2 in array",@"Data 3 in array",
-              @"Data 4 in array",@"Data 5 in array",@"Data 5 in array",
-              @"Data 6 in array",@"Data 7 in array",@"Data 8 in array",
-              @"Data 9 in array", nil];
+//    self.listData = [[NSMutableArray alloc]initWithObjects:
+//              @"Data 1 in array",@"Data 2 in array",@"Data 3 in array",
+//              @"Data 4 in array",@"Data 5 in array",@"Data 5 in array",
+//              @"Data 6 in array",@"Data 7 in array",@"Data 8 in array",
+//              @"Data 9 in array", nil];
+    
+    
+    if (self.plateNo) {
+        self.tableView.allowsMultipleSelection = YES;
+        self.btnDangKy.hidden = NO;
+        self.multiSelect.hidden = NO;
+        PFQuery *query = [PFQuery queryWithClassName:@"HondaItem"];
+        [query whereKey:@"plateNo" equalTo:self.plateNo];
+        [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
+            
+            if (!error) {
+                if (objects.count != 0) {
+                    self.listData = [CommonUtility convertPFObjectToHondaDataItem:objects];
+                    [self.tableView reloadData];
+                    // Do something with the found objects
+                    //            for (HondaUser *object in self.listData) {
+                    //                if (![arrPlateNo containsObject:object.plateNo]) {
+                    //                    [arrPlateNo addObject:object.plateNo];
+                    //                }
+                    //            }
+                }
+            } else {
+                // Log details of the failure
+                NSLog(@"Error: %@ %@", error, [error userInfo]);
+            }
+        }];
+    }else {
+        self.btnDangKy.hidden = YES;
+        self.multiSelect.hidden = YES;
+        PFQuery *query = [PFQuery queryWithClassName:@"HondaUser"];
+        //    [query whereKeyExists:@"endDate"];
+        [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
+            if (!error) {
+                self.listData = [CommonUtility convertPFObjectToHondaUser:objects];
+                [self.tableView reloadData];
+                // Do something with the found objects
+                //            for (HondaUser *object in self.listData) {
+                //                if (![arrPlateNo containsObject:object.plateNo]) {
+                //                    [arrPlateNo addObject:object.plateNo];
+                //                }
+                //            }
+            } else {
+                // Log details of the failure
+                NSLog(@"Error: %@ %@", error, [error userInfo]);
+            }
+        }];
+    }
     [CommonUtility registerNibWithName:@"HondaCustomCellTableViewCell" withIdentifier:@"cpoDataTableViewCell" withTableView:self.tableView];
-
+    
 }
 
 - (void)didReceiveMemoryWarning {
@@ -36,12 +86,15 @@
 
 
 - (IBAction)btnOpenLeftMenu:(id)sender {
+    
 }
 
+- (IBAction)dangKyClick:(id)sender {
+//    [[NavigationView shareInstance] howtouse];
+}
 
 #pragma mark - Table View Data source
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:
-(NSInteger)section{
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
     return [self.listData count];
 }
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -59,29 +112,15 @@
         cell = [nib objectAtIndex:0];
     }
     
-    cell.txtName.text = @"Tuấn";
-    cell.txtMotoType.text = @"Liberty";
-    
-    
-    
-//    static NSString *cellIdentifier = @"cellID";
-//    
-//    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:
-//                             cellIdentifier];
-//    if (cell == nil) {
-//        cell = [[UITableViewCell alloc]initWithStyle:
-//                UITableViewCellStyleDefault reuseIdentifier:cellIdentifier];
-//    }
-//    NSString *stringForCell;
-//    if (indexPath.section == 0) {
-//        stringForCell= [myData objectAtIndex:indexPath.row];
-//        
-//    }
-//    else if (indexPath.section == 1){
-//        stringForCell= [myData objectAtIndex:indexPath.row+ [myData count]/2];
-//        
-//    }
-//    [cell.textLabel setText:stringForCell];
+    if (self.plateNo) {
+        HondaDataItem *hondaItem  = [CommonUtility getCPODataInArray:self.listData atIndex:indexPath.row];
+        [cell setModelDetail:hondaItem];
+    }else {
+        HondaUser *hondaUser;
+        hondaUser = [CommonUtility getCPODataInArray:self.listData atIndex:indexPath.row];
+        [cell setModel:hondaUser];
+    }
+
     return cell;
 }
 
@@ -92,13 +131,55 @@
 
 
 #pragma mark - TableView delegate
+/**
+ *  Did select
+ *
+ *  @param tableView <#tableView description#>
+ *  @param indexPath <#indexPath description#>
+ */
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+//    [tableView deselectRowAtIndexPath:indexPath animated:YES];
+//    UITableViewCell *cell = [tableView cellForRowAtIndexPath:indexPath];
+//    NSLog(@"Section:%d Row:%d selected and its data is %@",
+//          indexPath.section,indexPath.row,cell.textLabel.text);
+    if (!self.isEditModeView) {
+        if (self.plateNo) {
+            DetailViewController *detail = [[DetailViewController alloc] init];
+            [self.navigationController pushViewController:detail animated:NO];
+        }else {
+            HondaUser *cpoData = [self.listData objectAtIndex:indexPath.row];
+            HomeViewController *homeView = [[HomeViewController alloc] initWithNibName:@"HomeViewController" bundle:nil];
+            homeView.plateNo = cpoData.plateNo;
+            [self.navigationController pushViewController:homeView animated:NO];
+        }
+    }else {
+    
+        UITableViewCell* cell = [tableView cellForRowAtIndexPath:indexPath];
+        cell.accessoryType = UITableViewCellAccessoryCheckmark;
+    }
+}
 
--(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:
-(NSIndexPath *)indexPath{
-    [tableView deselectRowAtIndexPath:indexPath animated:YES];
-    UITableViewCell *cell = [tableView cellForRowAtIndexPath:indexPath];
-    NSLog(@"Section:%d Row:%d selected and its data is %@",
-          indexPath.section,indexPath.row,cell.textLabel.text);
+/**
+ *  did DeSelect
+ *
+ *  @param tableView <#tableView description#>
+ *  @param indexPath <#indexPath description#>
+ */
+- (void)tableView:(UITableView *)tableView didDeselectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    UITableViewCell* cell = [tableView cellForRowAtIndexPath:indexPath];
+    cell.accessoryType = UITableViewCellAccessoryNone;
+}
+
+
+- (IBAction)btnMultiSelect:(id)sender {
+    if (self.isEditModeView) {
+        self.tableView.allowsMultipleSelection = NO;
+        self.isEditModeView = NO;
+    }else {
+        self.tableView.allowsMultipleSelection = YES;
+        self.isEditModeView = YES;
+    }
 }
 
 /*

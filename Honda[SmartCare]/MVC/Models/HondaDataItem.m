@@ -15,4 +15,13 @@
     }
     return self;
 }
+- (CGFloat)getProgress{
+    if (self.starDate == nil || self.endDate== nil) {
+        return 0;
+    }
+    NSTimeInterval daysBetween = [self.endDate timeIntervalSince1970] - [self.starDate timeIntervalSince1970];
+    NSTimeInterval daysUsed = [[NSDate date] timeIntervalSince1970] - [self.starDate timeIntervalSince1970];
+    
+    return daysUsed/daysBetween;
+}
 @end

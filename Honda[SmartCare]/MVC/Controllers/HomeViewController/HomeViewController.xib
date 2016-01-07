@@ -9,6 +9,8 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HomeViewController">
             <connections>
+                <outlet property="btnDangKy" destination="Fz7-uo-Zyn" id="NaD-7d-jtN"/>
+                <outlet property="multiSelect" destination="vqW-VE-xuS" id="w6P-kz-Who"/>
                 <outlet property="tableView" destination="YT6-RD-nUW" id="igP-Te-gng"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -117,18 +119,46 @@
                 </view>
                 <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="YT6-RD-nUW">
                     <rect key="frame" x="30" y="200" width="540" height="362"/>
-                    <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     <connections>
                         <outlet property="dataSource" destination="-1" id="q67-RB-Xcd"/>
                         <outlet property="delegate" destination="-1" id="lot-Yi-Odt"/>
                     </connections>
                 </tableView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fz7-uo-Zyn" customClass="MDButton">
+                    <rect key="frame" x="460" y="500" width="110" height="50"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="50" id="RRl-i7-7wK"/>
+                        <constraint firstAttribute="width" constant="110" id="fbA-wu-CcR"/>
+                    </constraints>
+                    <state key="normal" title="Dang Ky">
+                        <color key="titleColor" red="1" green="0.17918736288367942" blue="0.19701530070990314" alpha="1" colorSpace="calibratedRGB"/>
+                    </state>
+                    <connections>
+                        <action selector="dangKyClick:" destination="-1" eventType="touchUpInside" id="kjy-61-PeE"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vqW-VE-xuS" customClass="MDButton">
+                    <rect key="frame" x="330" y="500" width="110" height="50"/>
+                    <state key="normal" title="Select">
+                        <color key="titleColor" red="0.30917045796639275" green="0.2623392760319444" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    </state>
+                    <connections>
+                        <action selector="btnMultiSelect:" destination="-1" eventType="touchUpInside" id="bHg-gZ-Wxe"/>
+                    </connections>
+                </button>
             </subviews>
-            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <color key="backgroundColor" red="0.13303256220000001" green="0.63818974439999998" blue="1" alpha="1" colorSpace="calibratedRGB"/>
             <constraints>
+                <constraint firstItem="vqW-VE-xuS" firstAttribute="height" secondItem="Fz7-uo-Zyn" secondAttribute="height" id="2sZ-li-WbG"/>
+                <constraint firstAttribute="bottom" secondItem="Fz7-uo-Zyn" secondAttribute="bottom" constant="50" id="EEN-ac-ZaG"/>
                 <constraint firstItem="t5C-Fy-BJz" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="30" id="FJq-K7-fBc"/>
                 <constraint firstItem="ZV7-lv-Zep" firstAttribute="width" secondItem="t5C-Fy-BJz" secondAttribute="width" id="I0F-SQ-1b5"/>
+                <constraint firstItem="Fz7-uo-Zyn" firstAttribute="leading" secondItem="vqW-VE-xuS" secondAttribute="trailing" constant="20" id="I4y-SB-3P6"/>
+                <constraint firstItem="vqW-VE-xuS" firstAttribute="width" secondItem="Fz7-uo-Zyn" secondAttribute="width" id="Ia7-Gm-Wia"/>
+                <constraint firstItem="vqW-VE-xuS" firstAttribute="bottom" secondItem="Fz7-uo-Zyn" secondAttribute="bottom" id="S7j-vc-ITL"/>
                 <constraint firstItem="ZV7-lv-Zep" firstAttribute="leading" secondItem="t5C-Fy-BJz" secondAttribute="leading" id="SHQ-39-avy"/>
+                <constraint firstAttribute="trailing" secondItem="Fz7-uo-Zyn" secondAttribute="trailing" constant="30" id="ZHt-BU-T8Z"/>
                 <constraint firstItem="t5C-Fy-BJz" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="dIF-Jt-Mu4"/>
                 <constraint firstItem="ZV7-lv-Zep" firstAttribute="top" secondItem="t5C-Fy-BJz" secondAttribute="bottom" constant="15" id="n4U-JS-1Xn"/>
                 <constraint firstItem="YT6-RD-nUW" firstAttribute="top" secondItem="ZV7-lv-Zep" secondAttribute="bottom" constant="2" id="shh-0Q-3he"/>

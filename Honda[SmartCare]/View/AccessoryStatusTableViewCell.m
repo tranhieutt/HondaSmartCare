@@ -14,7 +14,7 @@
     // Initialization code
     _progressBar.progressTintColor = [UIColor redColor];
     _progressBar.trackTintColor = [UIColor lightGrayColor];
-    _progressBar.type                     = YLProgressBarTypeFlat;
+    _progressBar.type                     = YLProgressBarTypeRounded;
     _progressBar.indicatorTextDisplayMode = YLProgressBarIndicatorTextDisplayModeProgress;
     _progressBar.behavior                 = YLProgressBarBehaviorIndeterminate;
     _progressBar.stripesOrientation       = YLProgressBarStripesOrientationVertical;

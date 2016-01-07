@@ -120,6 +120,12 @@
 		4CD7C7061C2E63F200F0F589 /* ParseFacebookUtilsV4.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4CD7C7021C2E63F200F0F589 /* ParseFacebookUtilsV4.framework */; };
 		4CD7C7071C2E63F200F0F589 /* ParseTwitterUtils.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4CD7C7031C2E63F200F0F589 /* ParseTwitterUtils.framework */; };
 		4CD7C7081C2E63F200F0F589 /* ParseUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4CD7C7041C2E63F200F0F589 /* ParseUI.framework */; };
+		4CE247851C3CE0E90087BC78 /* HondaBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CE247831C3CE0E90087BC78 /* HondaBaseViewController.m */; };
+		4CE247861C3CE0E90087BC78 /* HondaBaseViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4CE247841C3CE0E90087BC78 /* HondaBaseViewController.xib */; };
+		4CE2478F1C3CE14A0087BC78 /* ADPageControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CE2478B1C3CE14A0087BC78 /* ADPageControl.m */; };
+		4CE247901C3CE14A0087BC78 /* ADPageControl.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4CE2478C1C3CE14A0087BC78 /* ADPageControl.xib */; };
+		4CE247911C3CE14A0087BC78 /* ADPageModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CE2478E1C3CE14A0087BC78 /* ADPageModel.m */; };
+		4CE5DAFF1C3C1DED00904875 /* MarqueeLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CE5DAFE1C3C1DED00904875 /* MarqueeLabel.m */; };
 		4CF0ADB91C32DC5400B2EB33 /* DownloadManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CF0ADB81C32DC5400B2EB33 /* DownloadManager.m */; };
 		4CF0ADDB1C32DCC100B2EB33 /* NSDate+Compare.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CF0ADC41C32DCC100B2EB33 /* NSDate+Compare.m */; };
 		4CF0ADDC1C32DCC100B2EB33 /* NSDictionary+ObjectForKeyOverride.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CF0ADC71C32DCC100B2EB33 /* NSDictionary+ObjectForKeyOverride.m */; };
@@ -140,6 +146,10 @@
 		4CFA66421C377923009424BF /* ListAccessoriesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CFA66401C377923009424BF /* ListAccessoriesViewController.m */; };
 		4CFA66431C377923009424BF /* ListAccessoriesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4CFA66411C377923009424BF /* ListAccessoriesViewController.xib */; };
 		4CFA664C1C378070009424BF /* HondaDataItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CFA664B1C378070009424BF /* HondaDataItem.m */; };
+		A424F7161C3E7B030015EB8A /* HondaConfirmPaymentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A424F7141C3E7B030015EB8A /* HondaConfirmPaymentViewController.m */; };
+		A424F7171C3E7B030015EB8A /* HondaConfirmPaymentViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A424F7151C3E7B030015EB8A /* HondaConfirmPaymentViewController.xib */; };
+		A45A20D71C3D1596000914A8 /* HondaRepairItemsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A45A20D51C3D1596000914A8 /* HondaRepairItemsViewController.m */; };
+		A45A20D81C3D1596000914A8 /* HondaRepairItemsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A45A20D61C3D1596000914A8 /* HondaRepairItemsViewController.xib */; };
 		A48E8F7B1C327850009825C1 /* YLProgressBar.m in Sources */ = {isa = PBXBuildFile; fileRef = A48E8F7A1C327850009825C1 /* YLProgressBar.m */; };
 		A48E8F8A1C327CBE009825C1 /* AccessoryStatusTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A48E8F881C327CBE009825C1 /* AccessoryStatusTableViewCell.m */; };
 		A48E8F8B1C327CBE009825C1 /* AccessoryStatusTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A48E8F891C327CBE009825C1 /* AccessoryStatusTableViewCell.xib */; };
@@ -150,6 +160,9 @@
 		A4ECE1FD1C34FEC4005E493A /* ConfirmRepairTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A4ECE1FB1C34FEC4005E493A /* ConfirmRepairTableViewCell.m */; };
 		A4ECE1FE1C34FEC4005E493A /* ConfirmRepairTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A4ECE1FC1C34FEC4005E493A /* ConfirmRepairTableViewCell.xib */; };
 		A4ECE2011C35028B005E493A /* onboard_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = A4ECE2001C35028B005E493A /* onboard_icon.png */; };
+		F83285F41C3E526200DE0F93 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F83285F31C3E526200DE0F93 /* AVFoundation.framework */; };
+		F88048381C3D3B7F00E442AF /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F88048361C3D3B7F00E442AF /* DetailViewController.m */; };
+		F88048391C3D3B7F00E442AF /* DetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F88048371C3D3B7F00E442AF /* DetailViewController.xib */; };
 		F89D85D61C3A44130003F803 /* honda-128.png in Resources */ = {isa = PBXBuildFile; fileRef = F89D85D31C3A44130003F803 /* honda-128.png */; };
 		F89D85D71C3A44130003F803 /* icon_tab_Thumnail_blue.png in Resources */ = {isa = PBXBuildFile; fileRef = F89D85D41C3A44130003F803 /* icon_tab_Thumnail_blue.png */; };
 		F89D85D81C3A44130003F803 /* Search.png in Resources */ = {isa = PBXBuildFile; fileRef = F89D85D51C3A44130003F803 /* Search.png */; };
@@ -157,6 +170,10 @@
 		F89D85E21C3A463A0003F803 /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F89D85E01C3A463A0003F803 /* HomeViewController.xib */; };
 		F89D85ED1C3A48C30003F803 /* NavigationView.m in Sources */ = {isa = PBXBuildFile; fileRef = F89D85EB1C3A48C30003F803 /* NavigationView.m */; };
 		F89D85EE1C3A48C30003F803 /* NavigationView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F89D85EC1C3A48C30003F803 /* NavigationView.xib */; };
+		F8B489FE1C3E587500E13E05 /* UIImagePickerController+OrientationFix.m in Sources */ = {isa = PBXBuildFile; fileRef = F8B489FD1C3E587500E13E05 /* UIImagePickerController+OrientationFix.m */; };
+		F8B48A061C3E605A00E13E05 /* UIImage+FixOrientation.m in Sources */ = {isa = PBXBuildFile; fileRef = F8B48A031C3E605A00E13E05 /* UIImage+FixOrientation.m */; };
+		F8B48A071C3E605A00E13E05 /* UIImage+resizeAndCrop.m in Sources */ = {isa = PBXBuildFile; fileRef = F8B48A051C3E605A00E13E05 /* UIImage+resizeAndCrop.m */; };
+		F8B48A0B1C3E65BB00E13E05 /* UIAlertView+Blocks.m in Sources */ = {isa = PBXBuildFile; fileRef = F8B48A0A1C3E65BB00E13E05 /* UIAlertView+Blocks.m */; };
 		F8C3C0691C3A6E60004D8749 /* CommonUtility.m in Sources */ = {isa = PBXBuildFile; fileRef = F8C3C0681C3A6E60004D8749 /* CommonUtility.m */; };
 		F8C3C0701C3A6F59004D8749 /* LeftMenuViewControllerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F8C3C06E1C3A6F59004D8749 /* LeftMenuViewControllerViewController.m */; };
 		F8C3C0711C3A6F59004D8749 /* LeftMenuViewControllerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F8C3C06F1C3A6F59004D8749 /* LeftMenuViewControllerViewController.xib */; };
@@ -402,6 +419,16 @@
 		4CD7C7021C2E63F200F0F589 /* ParseFacebookUtilsV4.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ParseFacebookUtilsV4.framework; sourceTree = "<group>"; };
 		4CD7C7031C2E63F200F0F589 /* ParseTwitterUtils.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ParseTwitterUtils.framework; sourceTree = "<group>"; };
 		4CD7C7041C2E63F200F0F589 /* ParseUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ParseUI.framework; sourceTree = "<group>"; };
+		4CE247821C3CE0E90087BC78 /* HondaBaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HondaBaseViewController.h; path = "Honda[SmartCare]/MVC/Controllers/HondaBaseViewController.h"; sourceTree = SOURCE_ROOT; };
+		4CE247831C3CE0E90087BC78 /* HondaBaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HondaBaseViewController.m; path = "Honda[SmartCare]/MVC/Controllers/HondaBaseViewController.m"; sourceTree = SOURCE_ROOT; };
+		4CE247841C3CE0E90087BC78 /* HondaBaseViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = HondaBaseViewController.xib; path = "Honda[SmartCare]/MVC/Controllers/HondaBaseViewController.xib"; sourceTree = SOURCE_ROOT; };
+		4CE2478A1C3CE14A0087BC78 /* ADPageControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ADPageControl.h; sourceTree = "<group>"; };
+		4CE2478B1C3CE14A0087BC78 /* ADPageControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ADPageControl.m; sourceTree = "<group>"; };
+		4CE2478C1C3CE14A0087BC78 /* ADPageControl.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ADPageControl.xib; sourceTree = "<group>"; };
+		4CE2478D1C3CE14A0087BC78 /* ADPageModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ADPageModel.h; sourceTree = "<group>"; };
+		4CE2478E1C3CE14A0087BC78 /* ADPageModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ADPageModel.m; sourceTree = "<group>"; };
+		4CE5DAFD1C3C1DED00904875 /* MarqueeLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MarqueeLabel.h; sourceTree = "<group>"; };
+		4CE5DAFE1C3C1DED00904875 /* MarqueeLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MarqueeLabel.m; sourceTree = "<group>"; };
 		4CF0ADB71C32DC5400B2EB33 /* DownloadManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DownloadManager.h; sourceTree = "<group>"; };
 		4CF0ADB81C32DC5400B2EB33 /* DownloadManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DownloadManager.m; sourceTree = "<group>"; };
 		4CF0ADC31C32DCC100B2EB33 /* NSDate+Compare.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+Compare.h"; sourceTree = "<group>"; };
@@ -438,6 +465,12 @@
 		4CFA66411C377923009424BF /* ListAccessoriesViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ListAccessoriesViewController.xib; sourceTree = "<group>"; };
 		4CFA664A1C378070009424BF /* HondaDataItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HondaDataItem.h; sourceTree = "<group>"; };
 		4CFA664B1C378070009424BF /* HondaDataItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HondaDataItem.m; sourceTree = "<group>"; };
+		A424F7131C3E7B030015EB8A /* HondaConfirmPaymentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HondaConfirmPaymentViewController.h; sourceTree = "<group>"; };
+		A424F7141C3E7B030015EB8A /* HondaConfirmPaymentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HondaConfirmPaymentViewController.m; sourceTree = "<group>"; };
+		A424F7151C3E7B030015EB8A /* HondaConfirmPaymentViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HondaConfirmPaymentViewController.xib; sourceTree = "<group>"; };
+		A45A20D41C3D1596000914A8 /* HondaRepairItemsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HondaRepairItemsViewController.h; sourceTree = "<group>"; };
+		A45A20D51C3D1596000914A8 /* HondaRepairItemsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HondaRepairItemsViewController.m; sourceTree = "<group>"; };
+		A45A20D61C3D1596000914A8 /* HondaRepairItemsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HondaRepairItemsViewController.xib; sourceTree = "<group>"; };
 		A48E8F791C327850009825C1 /* YLProgressBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YLProgressBar.h; sourceTree = "<group>"; };
 		A48E8F7A1C327850009825C1 /* YLProgressBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YLProgressBar.m; sourceTree = "<group>"; };
 		A48E8F871C327CBE009825C1 /* AccessoryStatusTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AccessoryStatusTableViewCell.h; path = "Honda[SmartCare]/View/AccessoryStatusTableViewCell.h"; sourceTree = SOURCE_ROOT; };
@@ -453,6 +486,10 @@
 		A4ECE1FB1C34FEC4005E493A /* ConfirmRepairTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConfirmRepairTableViewCell.m; sourceTree = "<group>"; };
 		A4ECE1FC1C34FEC4005E493A /* ConfirmRepairTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ConfirmRepairTableViewCell.xib; sourceTree = "<group>"; };
 		A4ECE2001C35028B005E493A /* onboard_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = onboard_icon.png; sourceTree = "<group>"; };
+		F83285F31C3E526200DE0F93 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		F88048351C3D3B7F00E442AF /* DetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
+		F88048361C3D3B7F00E442AF /* DetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
+		F88048371C3D3B7F00E442AF /* DetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DetailViewController.xib; sourceTree = "<group>"; };
 		F89D85D31C3A44130003F803 /* honda-128.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "honda-128.png"; sourceTree = "<group>"; };
 		F89D85D41C3A44130003F803 /* icon_tab_Thumnail_blue.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_tab_Thumnail_blue.png; sourceTree = "<group>"; };
 		F89D85D51C3A44130003F803 /* Search.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Search.png; sourceTree = "<group>"; };
@@ -462,6 +499,14 @@
 		F89D85EA1C3A48C30003F803 /* NavigationView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NavigationView.h; sourceTree = "<group>"; };
 		F89D85EB1C3A48C30003F803 /* NavigationView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NavigationView.m; sourceTree = "<group>"; };
 		F89D85EC1C3A48C30003F803 /* NavigationView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NavigationView.xib; sourceTree = "<group>"; };
+		F8B489FC1C3E587500E13E05 /* UIImagePickerController+OrientationFix.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImagePickerController+OrientationFix.h"; sourceTree = "<group>"; };
+		F8B489FD1C3E587500E13E05 /* UIImagePickerController+OrientationFix.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImagePickerController+OrientationFix.m"; sourceTree = "<group>"; };
+		F8B48A021C3E605A00E13E05 /* UIImage+FixOrientation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+FixOrientation.h"; sourceTree = "<group>"; };
+		F8B48A031C3E605A00E13E05 /* UIImage+FixOrientation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+FixOrientation.m"; sourceTree = "<group>"; };
+		F8B48A041C3E605A00E13E05 /* UIImage+resizeAndCrop.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+resizeAndCrop.h"; sourceTree = "<group>"; };
+		F8B48A051C3E605A00E13E05 /* UIImage+resizeAndCrop.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+resizeAndCrop.m"; sourceTree = "<group>"; };
+		F8B48A091C3E65BB00E13E05 /* UIAlertView+Blocks.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIAlertView+Blocks.h"; sourceTree = "<group>"; };
+		F8B48A0A1C3E65BB00E13E05 /* UIAlertView+Blocks.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIAlertView+Blocks.m"; sourceTree = "<group>"; };
 		F8C3C0671C3A6E60004D8749 /* CommonUtility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommonUtility.h; sourceTree = "<group>"; };
 		F8C3C0681C3A6E60004D8749 /* CommonUtility.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CommonUtility.m; sourceTree = "<group>"; };
 		F8C3C06D1C3A6F59004D8749 /* LeftMenuViewControllerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LeftMenuViewControllerViewController.h; sourceTree = "<group>"; };
@@ -480,6 +525,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F83285F41C3E526200DE0F93 /* AVFoundation.framework in Frameworks */,
 				4CD7C6FA1C2E398800F0F589 /* libsqlite3.tbd in Frameworks */,
 				4CD7C6F81C2E397D00F0F589 /* libz.tbd in Frameworks */,
 				4CD7C7051C2E63F200F0F589 /* ParseFacebookUtils.framework in Frameworks */,
@@ -784,6 +830,7 @@
 		4CD7C6811C2E36E300F0F589 = {
 			isa = PBXGroup;
 			children = (
+				F83285F31C3E526200DE0F93 /* AVFoundation.framework */,
 				4CD7C6F91C2E398800F0F589 /* libsqlite3.tbd */,
 				4CD7C6F71C2E397D00F0F589 /* libz.tbd */,
 				4CD7C6F51C2E397000F0F589 /* SystemConfiguration.framework */,
@@ -848,6 +895,7 @@
 		4CD7C6A51C2E390200F0F589 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				F88048341C3D3AA300E442AF /* DetailController */,
 				F8C3C06C1C3A6F46004D8749 /* MenuController */,
 				F89D85E31C3A46450003F803 /* Login */,
 				F89D85DD1C3A463A0003F803 /* HomeViewController */,
@@ -861,6 +909,9 @@
 		4CD7C6A81C2E390200F0F589 /* RootController */ = {
 			isa = PBXGroup;
 			children = (
+				4CE247821C3CE0E90087BC78 /* HondaBaseViewController.h */,
+				4CE247831C3CE0E90087BC78 /* HondaBaseViewController.m */,
+				4CE247841C3CE0E90087BC78 /* HondaBaseViewController.xib */,
 			);
 			path = RootController;
 			sourceTree = "<group>";
@@ -915,6 +966,11 @@
 		4CD7C6AE1C2E390200F0F589 /* ThirdParty */ = {
 			isa = PBXGroup;
 			children = (
+				F8B48A081C3E65BB00E13E05 /* BlocksKit */,
+				F8B48A011C3E605A00E13E05 /* UIImage+Category */,
+				F8B489FB1C3E587500E13E05 /* OrientationFix */,
+				4CE247891C3CE14A0087BC78 /* ADPageControl */,
+				4CE5DAFC1C3C1DED00904875 /* MarqueeLabel */,
 				4C58E8171C3971CA005DFEB6 /* BlocksKit */,
 				4C58E81A1C3971CA005DFEB6 /* CustomColor */,
 				4C58E81D1C3971CA005DFEB6 /* RZSplitViewController */,
@@ -1024,6 +1080,27 @@
 				4C2D0BE61C33715E0096DF55 /* HondaParse.m */,
 			);
 			path = ServiceManager;
+			sourceTree = "<group>";
+		};
+		4CE247891C3CE14A0087BC78 /* ADPageControl */ = {
+			isa = PBXGroup;
+			children = (
+				4CE2478A1C3CE14A0087BC78 /* ADPageControl.h */,
+				4CE2478B1C3CE14A0087BC78 /* ADPageControl.m */,
+				4CE2478C1C3CE14A0087BC78 /* ADPageControl.xib */,
+				4CE2478D1C3CE14A0087BC78 /* ADPageModel.h */,
+				4CE2478E1C3CE14A0087BC78 /* ADPageModel.m */,
+			);
+			path = ADPageControl;
+			sourceTree = "<group>";
+		};
+		4CE5DAFC1C3C1DED00904875 /* MarqueeLabel */ = {
+			isa = PBXGroup;
+			children = (
+				4CE5DAFD1C3C1DED00904875 /* MarqueeLabel.h */,
+				4CE5DAFE1C3C1DED00904875 /* MarqueeLabel.m */,
+			);
+			path = MarqueeLabel;
 			sourceTree = "<group>";
 		};
 		4CF0ADB61C32DC5400B2EB33 /* DownloadManager */ = {
@@ -1146,6 +1223,12 @@
 				4CFA663F1C377923009424BF /* ListAccessoriesViewController.h */,
 				4CFA66401C377923009424BF /* ListAccessoriesViewController.m */,
 				4CFA66411C377923009424BF /* ListAccessoriesViewController.xib */,
+				A45A20D41C3D1596000914A8 /* HondaRepairItemsViewController.h */,
+				A45A20D51C3D1596000914A8 /* HondaRepairItemsViewController.m */,
+				A45A20D61C3D1596000914A8 /* HondaRepairItemsViewController.xib */,
+				A424F7131C3E7B030015EB8A /* HondaConfirmPaymentViewController.h */,
+				A424F7141C3E7B030015EB8A /* HondaConfirmPaymentViewController.m */,
+				A424F7151C3E7B030015EB8A /* HondaConfirmPaymentViewController.xib */,
 			);
 			path = ListAccessories;
 			sourceTree = "<group>";
@@ -1205,6 +1288,16 @@
 			path = Resource;
 			sourceTree = "<group>";
 		};
+		F88048341C3D3AA300E442AF /* DetailController */ = {
+			isa = PBXGroup;
+			children = (
+				F88048351C3D3B7F00E442AF /* DetailViewController.h */,
+				F88048361C3D3B7F00E442AF /* DetailViewController.m */,
+				F88048371C3D3B7F00E442AF /* DetailViewController.xib */,
+			);
+			name = DetailController;
+			sourceTree = "<group>";
+		};
 		F89D85DD1C3A463A0003F803 /* HomeViewController */ = {
 			isa = PBXGroup;
 			children = (
@@ -1238,6 +1331,35 @@
 			name = CustomView;
 			path = "Honda[SmartCare]/View/CustomView";
 			sourceTree = SOURCE_ROOT;
+		};
+		F8B489FB1C3E587500E13E05 /* OrientationFix */ = {
+			isa = PBXGroup;
+			children = (
+				F8B489FC1C3E587500E13E05 /* UIImagePickerController+OrientationFix.h */,
+				F8B489FD1C3E587500E13E05 /* UIImagePickerController+OrientationFix.m */,
+			);
+			path = OrientationFix;
+			sourceTree = "<group>";
+		};
+		F8B48A011C3E605A00E13E05 /* UIImage+Category */ = {
+			isa = PBXGroup;
+			children = (
+				F8B48A021C3E605A00E13E05 /* UIImage+FixOrientation.h */,
+				F8B48A031C3E605A00E13E05 /* UIImage+FixOrientation.m */,
+				F8B48A041C3E605A00E13E05 /* UIImage+resizeAndCrop.h */,
+				F8B48A051C3E605A00E13E05 /* UIImage+resizeAndCrop.m */,
+			);
+			path = "UIImage+Category";
+			sourceTree = "<group>";
+		};
+		F8B48A081C3E65BB00E13E05 /* BlocksKit */ = {
+			isa = PBXGroup;
+			children = (
+				F8B48A091C3E65BB00E13E05 /* UIAlertView+Blocks.h */,
+				F8B48A0A1C3E65BB00E13E05 /* UIAlertView+Blocks.m */,
+			);
+			path = BlocksKit;
+			sourceTree = "<group>";
 		};
 		F8C3C06C1C3A6F46004D8749 /* MenuController */ = {
 			isa = PBXGroup;
@@ -1332,17 +1454,22 @@
 			files = (
 				A48E8F8B1C327CBE009825C1 /* AccessoryStatusTableViewCell.xib in Resources */,
 				A48E8FA41C328F61009825C1 /* CollectionViewCell.xib in Resources */,
+				4CE247901C3CE14A0087BC78 /* ADPageControl.xib in Resources */,
+				A45A20D81C3D1596000914A8 /* HondaRepairItemsViewController.xib in Resources */,
 				F89D85D61C3A44130003F803 /* honda-128.png in Resources */,
 				F8C857641C3A93D200B44F17 /* LoginViewController.xib in Resources */,
 				4CD7C69D1C2E36E300F0F589 /* LaunchScreen.storyboard in Resources */,
 				4CFA66431C377923009424BF /* ListAccessoriesViewController.xib in Resources */,
 				F8C3C0711C3A6F59004D8749 /* LeftMenuViewControllerViewController.xib in Resources */,
 				4CFA663D1C3774FD009424BF /* star_64_empty_blue.png in Resources */,
+				4CE247861C3CE0E90087BC78 /* HondaBaseViewController.xib in Resources */,
+				A424F7171C3E7B030015EB8A /* HondaConfirmPaymentViewController.xib in Resources */,
 				A4ECE1FE1C34FEC4005E493A /* ConfirmRepairTableViewCell.xib in Resources */,
 				F89D85EE1C3A48C30003F803 /* NavigationView.xib in Resources */,
 				A4ECE2011C35028B005E493A /* onboard_icon.png in Resources */,
 				4CD7C69A1C2E36E300F0F589 /* Assets.xcassets in Resources */,
 				F89D85D71C3A44130003F803 /* icon_tab_Thumnail_blue.png in Resources */,
+				F88048391C3D3B7F00E442AF /* DetailViewController.xib in Resources */,
 				F8C3C0771C3A7B3A004D8749 /* HondaCustomCellTableViewCell.xib in Resources */,
 				4CD7C6981C2E36E300F0F589 /* Main.storyboard in Resources */,
 				A48E8F911C3280D2009825C1 /* Header.xib in Resources */,
@@ -1359,6 +1486,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F8B489FE1C3E587500E13E05 /* UIImagePickerController+OrientationFix.m in Sources */,
 				4C2D0BDF1C336E320096DF55 /* UIImage+GIF.m in Sources */,
 				4CF0ADE21C32DCC100B2EB33 /* UIView+Util.m in Sources */,
 				4C2D0BD51C336E320096DF55 /* MKAnnotationView+WebCache.m in Sources */,
@@ -1368,6 +1496,7 @@
 				4C2D0BDC1C336E320096DF55 /* SDWebImageManager.m in Sources */,
 				4C92588D1C34C0F700D9796F /* MDSwitch.m in Sources */,
 				A48E8F901C3280D2009825C1 /* Header.m in Sources */,
+				4CE5DAFF1C3C1DED00904875 /* MarqueeLabel.m in Sources */,
 				4CFA66341C376DC0009424BF /* SWLongPressGestureRecognizer.m in Sources */,
 				4C9258931C34C0F700D9796F /* MDTouchGestureRecognizer.m in Sources */,
 				4CD7C6E61C2E390300F0F589 /* UIProgressView+AFNetworking.m in Sources */,
@@ -1376,6 +1505,7 @@
 				4CD7C6DD1C2E390300F0F589 /* AFURLSessionManager.m in Sources */,
 				4CFA664C1C378070009424BF /* HondaDataItem.m in Sources */,
 				4C58E82D1C3971CA005DFEB6 /* TPKeyboardAvoidingScrollView.m in Sources */,
+				A45A20D71C3D1596000914A8 /* HondaRepairItemsViewController.m in Sources */,
 				4CF0ADDD1C32DCC100B2EB33 /* UIAlertView+CompleteBlock.m in Sources */,
 				4C2D0BE11C336E320096DF55 /* UIImage+WebP.m in Sources */,
 				4CC152861C3ABF6500147BC7 /* HondaUser.m in Sources */,
@@ -1386,6 +1516,7 @@
 				4CD7C6E51C2E390300F0F589 /* UIImageView+AFNetworking.m in Sources */,
 				4C9258801C34C0F700D9796F /* NSDate+MDExtension.m in Sources */,
 				4CD7C6951C2E36E300F0F589 /* ViewController.m in Sources */,
+				A424F7161C3E7B030015EB8A /* HondaConfirmPaymentViewController.m in Sources */,
 				4CD7C6E41C2E390300F0F589 /* UIButton+AFNetworking.m in Sources */,
 				4CF0ADDF1C32DCC100B2EB33 /* UIDevice-Hardware.m in Sources */,
 				4C263BA71C32ADAB0027EE05 /* MBProgressHUD.m in Sources */,
@@ -1395,9 +1526,11 @@
 				4CD7C6921C2E36E300F0F589 /* AppDelegate.m in Sources */,
 				4C92587F1C34C0F700D9796F /* NSCalendarHelper.m in Sources */,
 				4C92589B1C34C0F700D9796F /* MDSuggestPopupView.m in Sources */,
+				F8B48A071C3E605A00E13E05 /* UIImage+resizeAndCrop.m in Sources */,
 				4C92588F1C34C0F700D9796F /* MDTabBarViewController.m in Sources */,
 				4C9258751C34C0F700D9796F /* AutoResizeTextView.m in Sources */,
 				4CFA66331C376DC0009424BF /* SWCellScrollView.m in Sources */,
+				4CE247911C3CE14A0087BC78 /* ADPageModel.m in Sources */,
 				4C263BA31C32ADAB0027EE05 /* FMDatabaseAdditions.m in Sources */,
 				4C9258991C34C0F700D9796F /* MDSliderThumbView.m in Sources */,
 				4C92587E1C34C0F700D9796F /* MDTimePickerDialog.m in Sources */,
@@ -1424,6 +1557,8 @@
 				4C2D0BDD1C336E320096DF55 /* SDWebImagePrefetcher.m in Sources */,
 				4C2D0BE01C336E320096DF55 /* UIImage+MultiFormat.m in Sources */,
 				4CFA66361C376DC0009424BF /* SWUtilityButtonTapGestureRecognizer.m in Sources */,
+				F8B48A061C3E605A00E13E05 /* UIImage+FixOrientation.m in Sources */,
+				F88048381C3D3B7F00E442AF /* DetailViewController.m in Sources */,
 				4C92587C1C34C0F700D9796F /* MDDatePicker.m in Sources */,
 				A4ECE1FD1C34FEC4005E493A /* ConfirmRepairTableViewCell.m in Sources */,
 				4C9258761C34C0F700D9796F /* MDCalendar.m in Sources */,
@@ -1440,6 +1575,7 @@
 				4C2D0BE71C33715E0096DF55 /* HondaParse.m in Sources */,
 				F89D85E11C3A463A0003F803 /* HomeViewController.m in Sources */,
 				4C2D0BE21C336E320096DF55 /* UIImageView+HighlightedWebCache.m in Sources */,
+				F8B48A0B1C3E65BB00E13E05 /* UIAlertView+Blocks.m in Sources */,
 				4C9258851C34C0F700D9796F /* UIFontHelper.m in Sources */,
 				4C9258901C34C0F700D9796F /* MDTableViewCell.m in Sources */,
 				4C9258951C34C0F700D9796F /* MDLinearProgressLayer.m in Sources */,
@@ -1469,6 +1605,7 @@
 				4C2D0BDB1C336E320096DF55 /* SDWebImageDownloaderOperation.m in Sources */,
 				4C263BA61C32ADAB0027EE05 /* FMResultSet.m in Sources */,
 				4C92587A1C34C0F700D9796F /* MDCalendarYearSelector.m in Sources */,
+				4CE247851C3CE0E90087BC78 /* HondaBaseViewController.m in Sources */,
 				F8C3C0761C3A7B3A004D8749 /* HondaCustomCellTableViewCell.m in Sources */,
 				4C9258921C34C0F700D9796F /* MDToast.m in Sources */,
 				4C58E82B1C3971CA005DFEB6 /* RZSplitViewController.m in Sources */,
@@ -1482,6 +1619,7 @@
 				4CD7C6E31C2E390300F0F589 /* UIActivityIndicatorView+AFNetworking.m in Sources */,
 				4C58E82C1C3971CA005DFEB6 /* TPKeyboardAvoidingCollectionView.m in Sources */,
 				4C9258791C34C0F700D9796F /* MDCalendarHeader.m in Sources */,
+				4CE2478F1C3CE14A0087BC78 /* ADPageControl.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1604,10 +1742,11 @@
 					"$(PROJECT_DIR)/Honda[SmartCare]/ThirdParty/PZSpeed",
 				);
 				INFOPLIST_FILE = "Honda[SmartCare]/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "-si.Honda-SmartCare-";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "2b598f4d-2529-49ea-958d-503339ab2c58";
 			};
 			name = Debug;
 		};
@@ -1622,10 +1761,11 @@
 					"$(PROJECT_DIR)/Honda[SmartCare]/ThirdParty/PZSpeed",
 				);
 				INFOPLIST_FILE = "Honda[SmartCare]/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "-si.Honda-SmartCare-";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "2b598f4d-2529-49ea-958d-503339ab2c58";
 			};
 			name = Release;
 		};

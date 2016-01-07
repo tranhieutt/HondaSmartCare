@@ -7,6 +7,9 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
+
+
 
 @interface HondaDataItem : NSObject
 @property (copy, nonatomic) NSString *userID;
@@ -17,6 +20,11 @@
 @property (copy, nonatomic) NSString *descriptionDetail;
 @property (copy, nonatomic) NSDate *starDate;
 @property (copy, nonatomic) NSDate *endDate;
+@property (copy, nonatomic) NSString *plateNo;
 @property (nonatomic)       NSInteger fixedPrice;
 @property (nonatomic)       NSInteger renewPrice;
+@property (nonatomic)        UIImage *imageFile;
+@property (nonatomic)       BOOL isRepair;
+@property (nonatomic)       BOOL isReplace;
+- (CGFloat)getProgress;
 @end

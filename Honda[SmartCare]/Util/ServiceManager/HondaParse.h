@@ -20,4 +20,5 @@
 - (void)deleteAccessory:(HondaDataItem *)hondaDataItem withCompletion:(void(^)(BOOL success))completion failure:(void(^)(HondaFailureCode failureCode))failure;
 - (void)getListUser:(void(^)(NSArray *array))completion failure:(void(^)(HondaFailureCode failureCode))failure;
 - (void)updateListAccessory:(NSArray *)listAccessory withCompletion:(void(^)(BOOL success))completion failure:(void(^)(HondaFailureCode failureCode))failure;
+- (void)getAllAccessory:(void(^)(NSArray *array))completion failure:(void(^)(HondaFailureCode failureCode))failure;
 @end

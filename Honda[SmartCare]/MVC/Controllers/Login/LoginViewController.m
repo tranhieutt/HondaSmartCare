@@ -10,6 +10,7 @@
 #import "HomeViewController.h"
 #import "ListAccessoriesViewController.h"
 #import "HondaAppContant.h"
+#import "CommonUtility.h"
 
 @interface LoginViewController ()
 
@@ -20,6 +21,11 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
+    UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc]
+                                   initWithTarget:self
+                                   action:@selector(dismissKeyboard)];
+    
+    [self.view addGestureRecognizer:tap];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -36,13 +42,25 @@
     // Pass the selected object to the new view controller.
 }
 */
+
+- (void)dismissKeyboard {
+    dispatch_async(dispatch_get_main_queue(), ^{
+        [self.txtPassword resignFirstResponder];
+        [self.txtUsername resignFirstResponder];
+    });
+    
+}
+
 - (IBAction)loginSystem:(id)sender {
+    [self dismissKeyboard];
     NSString *username = self.txtUsername.text;
     NSString *password = self.txtPassword.text;
     if ([username isEqualToString:@""] && [password isEqualToString:@""]) {
         if (IS_IPAD) {
             HomeViewController *home = [[HomeViewController alloc] init];
-            [self presentViewController:home animated:YES completion:nil];
+            UINavigationController *loginNavi = [CommonUtility navigationForPresentModalWithRootView:home];
+            [self presentViewController:loginNavi animated:YES completion:nil];
+            
         }else {
             NSLog(@"only ipad");
             //Check notification
@@ -61,8 +79,10 @@
             
         }
     }else {
-        ListAccessoriesViewController *view = [[ListAccessoriesViewController alloc]initWithNibName:@"ListAccessoriesViewController" bundle:nil];
-        [self presentViewController:view animated:NO completion:nil];
+        HondaBaseViewController *hondaBaseViewController = [[HondaBaseViewController alloc]initWithNibName:@"HondaBaseViewController" bundle:nil];
+        
+//        ListAccessoriesViewController *view = [[ListAccessoriesViewController alloc]initWithNibName:@"ListAccessoriesViewController" bundle:nil];
+        [self presentViewController:hondaBaseViewController animated:NO completion:nil];
     }
 }
 

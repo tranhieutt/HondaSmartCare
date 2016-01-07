@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9060" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <objects>
@@ -12,21 +12,29 @@
             <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
-                <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="akz-GH-bdE" customClass="YLProgressBar">
-                        <rect key="frame" x="158" y="16" width="154" height="12"/>
+                        <rect key="frame" x="214" y="12" width="100" height="20"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="height" constant="12" id="knZ-gC-WP4"/>
+                            <constraint firstAttribute="height" constant="20" id="knZ-gC-WP4"/>
                         </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="progress">
+                                <real key="value" value="0.0"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="color" keyPath="progressTintColor">
+                                <color key="value" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
                     </view>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7OV-g8-HY3">
-                        <rect key="frame" x="16" y="11" width="112" height="21"/>
+                        <rect key="frame" x="16" y="11" width="180" height="21"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="21" id="0Zq-w8-kS6"/>
-                            <constraint firstAttribute="width" constant="112" id="haM-1Z-EfE"/>
+                            <constraint firstAttribute="width" constant="180" id="haM-1Z-EfE"/>
                         </constraints>
                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -36,16 +44,16 @@
                 <constraints>
                     <constraint firstItem="7OV-g8-HY3" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="1U9-vS-E3X"/>
                     <constraint firstItem="7OV-g8-HY3" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="8" id="3PE-lc-I0h"/>
-                    <constraint firstAttribute="trailingMargin" secondItem="akz-GH-bdE" secondAttribute="trailing" id="A0h-jz-q5F"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="akz-GH-bdE" secondAttribute="trailing" constant="-2" id="A0h-jz-q5F"/>
                     <constraint firstItem="akz-GH-bdE" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="k98-TE-e8b"/>
-                    <constraint firstItem="akz-GH-bdE" firstAttribute="leading" secondItem="7OV-g8-HY3" secondAttribute="trailing" constant="30" id="xb4-iN-xXW"/>
+                    <constraint firstItem="akz-GH-bdE" firstAttribute="leading" secondItem="7OV-g8-HY3" secondAttribute="trailing" constant="18" id="xb4-iN-xXW"/>
                 </constraints>
             </tableViewCellContentView>
             <connections>
                 <outlet property="labelName" destination="7OV-g8-HY3" id="R4f-Tc-8rU"/>
                 <outlet property="progressBar" destination="akz-GH-bdE" id="kMt-58-o9I"/>
             </connections>
-            <point key="canvasLocation" x="177" y="346"/>
+            <point key="canvasLocation" x="244" y="348"/>
         </tableViewCell>
     </objects>
 </document>

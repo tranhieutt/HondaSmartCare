@@ -12,6 +12,13 @@
 #import "Header.h"
 #import "HondaAccess.h"
 #import "HondaParse.h"
+#import "HondaDataItem.h"
+#import "CommonUtility.h"
+#import "HondaAppContant.h"
+#import "HondaRepairItemsViewController.h"
+#import "DownloadManager.h"
+#import "SDWebImageDownloader.h"
+
 @interface ListAccessoriesViewController ()
 
 @end
@@ -23,6 +30,9 @@
     // Do any additional setup after loading the view from its nib.
     self.tableView.delegate = self;
     self.tableView.dataSource = self;
+    [self getHondaItem:@"Điện"];
+    itemDisplayed = 0;
+    
 }
 
 - (void)didReceiveMemoryWarning {
@@ -36,14 +46,23 @@
 }
 
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 5;
+    return [listHondaItems count];
 }
-- (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section {
-    return 140;
-}
--(UIView *) tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section {
-    Header *header =[[[NSBundle mainBundle] loadNibNamed:@"Header" owner:self options:nil] objectAtIndex:0];
-    return header;
+
+- (void) setDataForHeader:(HondaDataItem *)item {
+    
+    self.name.text = item.nameItem;
+    self.infor.text = item.descriptionDetail;
+    self.date.text = [CommonUtility convertDateToString:item.starDate withFormat:kFormatDateDisplay];
+    NSURL *url = [NSURL URLWithString:item.imageURL];
+    [[SDWebImageDownloader sharedDownloader] downloadImageWithURL:url options:SDWebImageDownloaderLowPriority progress:^(NSInteger receivedSize, NSInteger expectedSize) {
+        
+    } completed:^(UIImage *image, NSData *data, NSError *error, BOOL finished) {
+            dispatch_async(dispatch_get_main_queue(), ^{ // 2
+                self.imageView.image  = image; // 3
+            });
+    }];
+    self.detail.text = item.getProgress <0.8?@"Tốt":@"Yếu" ;
 }
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     
@@ -55,11 +74,30 @@
         NSArray *nib = [[NSBundle mainBundle] loadNibNamed:@"AccessoryStatusTableViewCell" owner:self options:nil];
         cell = [nib objectAtIndex:0];
     }
-    [cell setRightUtilityButtons:[self tableCellRightButtonsWithCPOData] WithButtonWidth:60];
+    if (listHondaItems == nil) {
+        return cell;
+    }
+    HondaDataItem *item = [listHondaItems objectAtIndex:indexPath.row];
+    CGFloat progress = item.getProgress;
+    [cell setDataForCellWithName:item.nameItem andProgress:progress];
+//    [cell setRightUtilityButtons:[self tableCellRightButtonsWithCPOData] WithButtonWidth:60];
     return cell;
 
 }
+#pragma mark - Tableview Delegate
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    itemDisplayed = indexPath.row;
+   
+    HondaDataItem *item = [listHondaItems objectAtIndex:itemDisplayed];
+    dispatch_async(dispatch_get_main_queue(), ^{
+        [self setDataForHeader:item];
+    });
+    
+    
+}
+
 #pragma mark - SWTableViewDelegate
+/*
 - (void)swipeableTableViewCell:(SWTableViewCell *)cell didTriggerRightUtilityButtonWithIndex:(NSInteger)index {
     //Close flick menu
     dispatch_async(dispatch_get_global_queue( DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^(void){
@@ -101,24 +139,20 @@
     [rightUtilityButtons sw_addUtilityButtonWithSpecial:NO normalIcon:@"star_64_empty_blue" selectedIcon:@"star_64_empty_blue" enabled:NO];
     return rightUtilityButtons;
 }
-#pragma mark - button click
-- (IBAction)buttonDienClick:(id)sender {
-    [[HondaParse sharedInstance] getGroupAccessory:@"Điện" withCompletion:^(NSArray *array) {
-        
+*/
+- (IBAction)buttonClick:(id)sender {
+    
+}
+- (void)getHondaItem:(NSString *)groupId {
+    [[HondaParse sharedInstance] getGroupAccessory:groupId withCompletion:^(NSArray *array) {
+        listHondaItems = array;
+        dispatch_async(dispatch_get_main_queue(), ^{
+            [self setDataForHeader:[listHondaItems firstObject]];
+        });
+        [self.tableView reloadData];
     } failure:^(HondaFailureCode failureCode) {
-        
     }];
-
 }
-- (IBAction)buttonKhungClick:(id)sender {
-}
-- (IBAction)buttonNhienlieuClick:(id)sender {
-}
-- (IBAction)buttonDongcoClick:(id)sender {
-}
-- (IBAction)buttonOtherClick:(id)sender {
-}
-
 
 
 @end

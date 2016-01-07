@@ -13,4 +13,10 @@
 @property (weak, nonatomic) IBOutlet UIButton *btnSearch;
 
 @property (weak, nonatomic) IBOutlet UIButton *btnLeftMenu;
+@property (copy, nonatomic) void(^openLeftMenuButtonClick)(id sender);
+@property (copy, nonatomic) void(^searchMenuButtonClick)(id sender);
+
+//+ (NavigationView*)shareInstance;
+- (void)howtouse;
+
 @end

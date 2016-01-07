@@ -24,7 +24,8 @@
 }
 - (void)addImageToParseWithImageView:(UIImageView*)imageView withCompletion:(void(^)(BOOL success))completion failure:(void(^)(HondaFailureCode failureCode))failure{
     // Convert to JPEG with 50% quality
-    NSData* data = UIImageJPEGRepresentation(imageView.image, 0.5f);
+    UIImage *image = [UIImage imageNamed:@"star_64_blue.png"];
+    NSData* data = UIImageJPEGRepresentation(image, 1.0f);
     PFFile *imageFile = [PFFile fileWithName:@"Image.jpg" data:data];
     
     // Save the image to Parse
@@ -49,7 +50,25 @@
 }
 -(void)getGroupAccessory:(NSString *)groupAccessoryName withCompletion:(void(^)(NSArray *array))completion failure:(void(^)(HondaFailureCode failureCode))failure{
     PFQuery *query = [PFQuery queryWithClassName:@"HondaItem"];
-    [query whereKey:@"groupAccessary" hasPrefix:groupAccessoryName];
+    [query whereKey:@"groupAccessary" equalTo:groupAccessoryName];
+    [query whereKey:@"plateNo" equalTo:@"14P7 - 2429"];
+    [query orderByAscending:@"createdAt"];
+    [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
+        if (!error) {
+            // The find succeeded.
+            if ([self convertPFObjectToHondaDataItem:objects].count) {
+                completion([self convertPFObjectToHondaDataItem:objects]);
+            }
+        } else {
+            // Log details of the failure
+            NSLog(@"Error: %@ %@", error, [error userInfo]);
+        }
+    }];
+}
+-(void)getAllAccessory:(void(^)(NSArray *array))completion failure:(void(^)(HondaFailureCode failureCode))failure{
+    PFQuery *query = [PFQuery queryWithClassName:@"HondaItem"];
+//get query by plateTo
+    [query whereKey:@"plateNo" equalTo:@"14P7 - 2429"];
     [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
         if (!error) {
             // The find succeeded.
@@ -104,6 +123,25 @@
         }
     }];
 }
+
+-(void)getListHonDaItem:(void(^)(NSArray *array))completion failure:(void(^)(HondaFailureCode failureCode))failure{
+    PFQuery *query = [PFQuery queryWithClassName:@"HondaItem"];
+    // [query whereKey:@"playerName" equalTo:@"Dan Stemkoski"];
+    [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
+        if (!error) {
+            // The find succeeded.
+            NSLog(@"Successfully retrieved %d scores.", objects.count);
+            // Do something with the found objects
+            for (PFObject *object in objects) {
+                NSLog(@"%@", object.objectId);
+            }
+        } else {
+            // Log details of the failure
+            NSLog(@"Error: %@ %@", error, [error userInfo]);
+        }
+    }];
+}
+
 -(void)addUser:(HondaUser *)hondaUser withCompletion:(void(^)(BOOL success))completion failure:(void(^)(HondaFailureCode failureCode))failure{
     PFObject *hondaItem = [PFObject objectWithClassName:@"HondaUser"];
     hondaItem[@"addressUser"]   = hondaUser.addressUser;
@@ -136,11 +174,12 @@
         NSMutableArray *saveAllOfMe = [NSMutableArray new];
         [listAccessory enumerateObjectsUsingBlock:^(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
             HondaDataItem *hondaItem = (HondaDataItem *)obj;
-            for (PFObject *object in objects) {
+            for (PFObject *  object in objects) {
+                
                 if ([object.objectId isEqualToString:hondaItem.objectId]) {
-                    [self convertHondaDataItemToPFObject:hondaItem];
+                    [saveAllOfMe addObject:[self convertHondaDataItemToPFObject:hondaItem]];
                 }
-                [saveAllOfMe addObject:object];
+               
             }
         }];
         [PFObject saveAllInBackground:saveAllOfMe block:^(BOOL success, NSError *error) {
@@ -175,9 +214,10 @@
 }
 - (NSMutableArray *)convertPFObjectToHondaDataItem:(NSArray *)listPFObjects{
     NSMutableArray *array = [[NSMutableArray alloc] init];
-    HondaDataItem *hondaItem = [[HondaDataItem alloc] init];
+
     [listPFObjects enumerateObjectsUsingBlock:^(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
         PFObject *object = (PFObject *)obj;
+        HondaDataItem *hondaItem = [[HondaDataItem alloc] init];
         hondaItem.objectId = object.objectId;
         hondaItem.groudAccessary     = (NSString *)[object objectForKey:@"groupAccessary"];
         hondaItem.nameItem           = (NSString *)[object objectForKey:@"nameItem"];
@@ -188,7 +228,8 @@
         hondaItem.endDate            = (NSDate *)[object objectForKey:@"endDate"];
         PFFile *file                 = (PFFile *)[object objectForKey:@"imageFile"];
         hondaItem.imageURL           = file.url;
-        hondaItem.userID             = (NSString *)[object objectForKey:@"userID"];
+//        hondaItem.userID             = (NSString *)[object objectForKey:@"userID"];
+        hondaItem.plateNo            = (NSString *)[object objectForKey:@"plateNo"];
         [array addObject:hondaItem];
     }];
     return array;
@@ -213,13 +254,22 @@
 }
 - (PFObject *)convertHondaDataItemToPFObject:(HondaDataItem *)hondaItem{
     PFObject *pfOject = [PFObject objectWithClassName:@"HondaItem"];
-    pfOject[@"groupAccessary"] = hondaItem.groudAccessary;
-    pfOject[@"nameItem"]    = hondaItem.nameItem;
-    pfOject[@"description"] = hondaItem.descriptionDetail;
+//    hard code add image
+//    UIImage *image = [UIImage imageNamed:@"star_64_blue.png"];
+    NSData* data = UIImageJPEGRepresentation(hondaItem.imageFile, 1.0f);
+    PFFile *imageFile = [PFFile fileWithName:@"Image.jpg" data:data];
+    
+    pfOject[@"imageFile"] = imageFile ? imageFile:@"";
+    pfOject[@"groupAccessary"] = hondaItem.groudAccessary ? hondaItem.groudAccessary:@"" ;
+    pfOject[@"nameItem"]    = hondaItem.nameItem ? hondaItem.nameItem:@"";
+    pfOject[@"description"] = hondaItem.descriptionDetail ? hondaItem.descriptionDetail:@"";
     pfOject[@"renewPrice"]  = @(hondaItem.renewPrice);
     pfOject[@"fixedPrice"]  = @(hondaItem.fixedPrice);
     pfOject[@"startDate"]   = hondaItem.starDate;
     pfOject[@"endDate"]     = hondaItem.endDate;
+
+    pfOject[@"plateNo"]     = hondaItem.plateNo;
+
     return pfOject;
 }
 @end

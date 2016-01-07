@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9060" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HondaRepairItemsViewController">
+            <connections>
+                <outlet property="closeBtn" destination="H5c-FS-E4w" id="vFp-GI-yJY"/>
+                <outlet property="tableView" destination="yZX-Bb-wPz" id="I2e-Xg-7N8"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="yZX-Bb-wPz">
+                    <rect key="frame" x="0.0" y="64" width="600" height="600"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                </tableView>
+                <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rh1-X0-OaM">
+                    <rect key="frame" x="0.0" y="20" width="600" height="44"/>
+                    <items>
+                        <navigationItem title="Title" id="NTQ-6w-ZNP">
+                            <barButtonItem key="leftBarButtonItem" title="Close" id="H5c-FS-E4w">
+                                <connections>
+                                    <action selector="closeRepairItems:" destination="-1" id="e43-0n-3yH"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem key="rightBarButtonItem" title="Apply" id="4c1-Hy-rok"/>
+                        </navigationItem>
+                    </items>
+                </navigationBar>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="yZX-Bb-wPz" firstAttribute="width" secondItem="i5M-Pr-FkT" secondAttribute="width" id="7Ev-wr-9FQ"/>
+                <constraint firstItem="yZX-Bb-wPz" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" constant="64" id="8WN-Le-Iv2"/>
+                <constraint firstItem="rh1-X0-OaM" firstAttribute="trailing" secondItem="yZX-Bb-wPz" secondAttribute="trailing" id="Iaf-YH-Kq7"/>
+                <constraint firstItem="rh1-X0-OaM" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="KfH-cI-mbk"/>
+                <constraint firstItem="yZX-Bb-wPz" firstAttribute="height" secondItem="i5M-Pr-FkT" secondAttribute="height" id="Tpc-R4-OQd"/>
+                <constraint firstItem="yZX-Bb-wPz" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="UL2-0F-sDe"/>
+                <constraint firstItem="rh1-X0-OaM" firstAttribute="bottom" secondItem="yZX-Bb-wPz" secondAttribute="top" id="gs9-jR-ed6"/>
+            </constraints>
+            <point key="canvasLocation" x="351" y="368"/>
+        </view>
+    </objects>
+</document>
